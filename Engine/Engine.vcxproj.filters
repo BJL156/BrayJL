@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{76FF3A1C-62A1-65F2-4B5C-7946379DEC42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glad">
+      <UniqueIdentifier>{9A8E79C1-0644-F2B6-8F38-EC8DFBECE8BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\glad\include">
+      <UniqueIdentifier>{0DB0903E-7911-6E4C-027F-B4FE6EDFA40B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Engine.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vendor\glad\include\glad.c">
+      <Filter>vendor\glad\include</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Engine.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
