@@ -116,6 +116,10 @@
     <ClCompile Include="Source\Graphics\Model.cpp" />
     <ClCompile Include="Source\Graphics\Shader.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaders\Model.frag" />
+    <None Include="Resources\Shaders\Model.vert" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

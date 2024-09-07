@@ -62,4 +62,8 @@
     </ClCompile>
     <ClCompile Include="Source\Core\Logger.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaders\Model.vert" />
+    <None Include="Resources\Shaders\Model.frag" />
+  </ItemGroup>
 </Project>
