@@ -3,8 +3,8 @@
 
 #include <glad/glad.h>
 #include <glfw/glfw3.h>
-#include <spdlog/spdlog.h>
 
+#include "Logger.h"
 #include "Utilities.h"
 
 #include <cstdint>

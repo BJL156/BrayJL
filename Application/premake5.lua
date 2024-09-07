@@ -7,17 +7,18 @@ project "Application"
 	targetdir ("%{wks.location}/bin/%{cfg.buildcfg}/%{cfg.architecture}")
 
 	files {
-		"source/**.h",
-		"source/**.cpp",
+		"Source/**.h",
+		"Source/**.cpp",
 		"%{wks.location}/vendor/glad/include/glad.c"
 	}
 
 	includedirs {
-		"source",
+		"Source",
 		"%{wks.location}/Engine/source",
-		"%{wks.location}/vendor/spdlog/include",
-		"%{wks.location}/vendor/glfw/include",
-		"%{wks.location}/vendor/glad/include"
+		"%{wks.location}/Vendor/spdlog/include",
+		"%{wks.location}/Vendor/glfw/include",
+		"%{wks.location}/Vendor/glad/include",
+		"%{wks.location}/Vendor/glm/include"
 	}
 
 	libdirs {

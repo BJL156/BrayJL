@@ -1,5 +1,11 @@
-﻿  Utilities.cpp
+﻿  glad.c
+  Utilities.cpp
   Window.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+D:\dev\engine\brayjl\vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
+  Mesh.cpp
+  Model.cpp
+  Shader.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
 D:\dev\engine\brayjl\vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
   Generating Code...

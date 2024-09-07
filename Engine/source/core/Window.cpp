@@ -1,7 +1,7 @@
 #include "Window.h"
 
 void glfwErrorCallback(int error, const char* description) {
-    spdlog::warn("GLFW Error (" + std::to_string(error) + "): " + description);
+    brayjl::Logger::error("GLFW Error (" + std::to_string(error) + "): " + description);
 }
 
 namespace brayjl {
@@ -35,7 +35,7 @@ namespace brayjl {
         }
 
         if (!glfwInit()) {
-            spdlog::error("Failed to initialize GLFW.");
+            Logger::error("Failed to initialize GLFW.");
             return;
         }
 
@@ -46,7 +46,7 @@ namespace brayjl {
 
         m_window = glfwCreateWindow(m_width, m_height, m_name.c_str(), nullptr, nullptr);
         if (m_window == nullptr) {
-            spdlog::error("Failed to create a GLFW window.");
+            Logger::error("Failed to create a GLFW window.");
             return;
         }
 
@@ -62,7 +62,7 @@ namespace brayjl {
 
     void Window::initializeGlad() {
         if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-            spdlog::error("Failed to initialize GLAD.");
+            Logger::error("Failed to initialize GLAD.");
             return;
         }
     }

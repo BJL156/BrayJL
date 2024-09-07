@@ -1,8 +1,21 @@
 #include "Application.h"
 
-int main(void) {
-	Application application{};
-	application.run();
+#include <stdexcept>
+#include <iostream>
+#include <cstdint>
 
-	return 0;
+int main(void) {
+	brayjl::Logger::initialize();
+
+	Application application{};
+	try {
+		application.run();
+	} catch (const std::exception& exception) {
+		spdlog::error(exception.what());
+		std::cin.get();
+
+		return EXIT_FAILURE;
+	}
+
+	return EXIT_SUCCESS;
 }

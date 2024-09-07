@@ -1,3 +1,6 @@
 D:\dev\engine\brayjl\vendor\glad\include\glad.c;D:\dev\engine\brayjl\Engine\obj\Release\glad.obj
-D:\dev\engine\brayjl\Engine\source\core\Utilities.cpp;D:\dev\engine\brayjl\Engine\obj\Release\Utilities.obj
-D:\dev\engine\brayjl\Engine\source\core\Window.cpp;D:\dev\engine\brayjl\Engine\obj\Release\Window.obj
+D:\dev\engine\brayjl\Engine\Source\Core\Utilities.cpp;D:\dev\engine\brayjl\Engine\obj\Release\Utilities.obj
+D:\dev\engine\brayjl\Engine\Source\Core\Window.cpp;D:\dev\engine\brayjl\Engine\obj\Release\Window.obj
+D:\dev\engine\brayjl\Engine\Source\Graphics\Mesh.cpp;D:\dev\engine\brayjl\Engine\obj\Release\Mesh.obj
+D:\dev\engine\brayjl\Engine\Source\Graphics\Model.cpp;D:\dev\engine\brayjl\Engine\obj\Release\Model.obj
+D:\dev\engine\brayjl\Engine\Source\Graphics\Shader.cpp;D:\dev\engine\brayjl\Engine\obj\Release\Shader.obj
