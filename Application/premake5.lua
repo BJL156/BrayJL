@@ -34,13 +34,17 @@ project "Application"
 		systemversion "latest"
 
 	filter "configurations:Debug"
+		defines {
+			"DEBUG"
+		}
+		
 		runtime "Debug"
 		symbols "on"
 
 	filter "configurations:Release"
-		runtime "Release"
-		optimize "on"
-
-	filter "configurations:Dist"
+		defines {
+			"RELEASE"
+		}
+		
 		runtime "Release"
 		optimize "on"

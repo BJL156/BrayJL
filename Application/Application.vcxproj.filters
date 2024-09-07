@@ -21,8 +21,9 @@
     <ClCompile Include="source\Main.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="source\Test.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
+    <ClCompile Include="source\Application.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Application.h" />
   </ItemGroup>
 </Project>

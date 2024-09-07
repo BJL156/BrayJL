@@ -1,2 +1,3 @@
 D:\dev\engine\brayjl\vendor\glad\include\glad.c;D:\dev\engine\brayjl\Engine\obj\Debug\glad.obj
-D:\dev\engine\brayjl\Engine\source\Engine.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Engine.obj
+D:\dev\engine\brayjl\Engine\source\core\Utilities.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Utilities.obj
+D:\dev\engine\brayjl\Engine\source\core\Window.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Window.obj

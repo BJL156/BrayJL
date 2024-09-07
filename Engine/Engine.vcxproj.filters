@@ -4,6 +4,9 @@
     <Filter Include="source">
       <UniqueIdentifier>{76FF3A1C-62A1-65F2-4B5C-7946379DEC42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{AEC9BDBA-1A7F-36B0-A373-30870F282DB4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -18,13 +21,20 @@
     <ClInclude Include="source\Engine.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="source\core\Utilities.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\core\Window.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
       <Filter>vendor\glad\include</Filter>
     </ClCompile>
-    <ClCompile Include="source\Engine.cpp">
-      <Filter>source</Filter>
+    <ClCompile Include="source\core\Window.cpp">
+      <Filter>source\core</Filter>
     </ClCompile>
+    <ClCompile Include="source\core\Utilities.cpp" />
   </ItemGroup>
 </Project>

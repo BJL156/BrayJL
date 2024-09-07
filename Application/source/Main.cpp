@@ -1,20 +1,8 @@
-#include "Engine.h"
-
-#include <iostream>
-
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include "Application.h"
 
 int main(void) {
-	if (glfwInit() == GLFW_FALSE) {
-		brayjl::print("Hello BrayJL! FAIL");
-	} else {
-		brayjl::print("Hello BrayJL!");
-	}
-
-	gladLoadGL();
-
-	std::cin.get();
+	Application application{};
+	application.run();
 
 	return 0;
 }
