@@ -42,14 +42,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug\x86_64\</OutDir>
+    <OutDir>..\Bin\Debug\x86_64\</OutDir>
     <IntDir>obj\Debug\</IntDir>
     <TargetName>Application</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release\x86_64\</OutDir>
+    <OutDir>..\Bin\Release\x86_64\</OutDir>
     <IntDir>obj\Release\</IntDir>
     <TargetName>Application</TargetName>
     <TargetExt>.exe</TargetExt>
@@ -105,13 +105,13 @@
     <ClCompile Include="Source\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Shaders\Model.frag" />
+    <None Include="Resources\Shaders\Model.vert" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
       <Project>{DBC7D3B0-C769-FE86-B024-12DB9C6585D7}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Shaders\Model.frag" />
-    <None Include="Resources\Shaders\Model.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

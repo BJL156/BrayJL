@@ -21,6 +21,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Core\Logger.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Core\Utilities.h">
       <Filter>Source\Core</Filter>
     </ClInclude>
@@ -39,11 +42,13 @@
     <ClInclude Include="Source\Graphics\Shader.h">
       <Filter>Source\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Core\Logger.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
       <Filter>vendor\glad\include</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\Logger.cpp">
+      <Filter>Source\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\Utilities.cpp">
       <Filter>Source\Core</Filter>
@@ -60,10 +65,5 @@
     <ClCompile Include="Source\Graphics\Shader.cpp">
       <Filter>Source\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\Logger.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Shaders\Model.vert" />
-    <None Include="Resources\Shaders\Model.frag" />
   </ItemGroup>
 </Project>

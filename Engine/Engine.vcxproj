@@ -41,13 +41,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\bin\Debug\x86_64\</OutDir>
+    <OutDir>..\Bin\Debug\x86_64\</OutDir>
     <IntDir>obj\Debug\</IntDir>
     <TargetName>Engine</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\bin\Release\x86_64\</OutDir>
+    <OutDir>..\Bin\Release\x86_64\</OutDir>
     <IntDir>obj\Release\</IntDir>
     <TargetName>Engine</TargetName>
     <TargetExt>.lib</TargetExt>
@@ -115,10 +115,6 @@
     <ClCompile Include="Source\Graphics\Mesh.cpp" />
     <ClCompile Include="Source\Graphics\Model.cpp" />
     <ClCompile Include="Source\Graphics\Shader.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Shaders\Model.frag" />
-    <None Include="Resources\Shaders\Model.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

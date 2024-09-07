@@ -4,11 +4,14 @@ project "Application"
 	cppdialect "C++17"
 	staticruntime "off"
 
-	targetdir ("%{wks.location}/bin/%{cfg.buildcfg}/%{cfg.architecture}")
+	targetdir ("%{wks.location}/Bin/%{cfg.buildcfg}/%{cfg.architecture}")
 
 	files {
 		"Source/**.h",
+		"Source/**.hpp",
 		"Source/**.cpp",
+		"Resources/**.vert",
+		"Resources/**.frag",
 		"%{wks.location}/vendor/glad/include/glad.c"
 	}
 
