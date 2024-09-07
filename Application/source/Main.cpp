@@ -11,7 +11,7 @@ int main(void) {
 	try {
 		application.run();
 	} catch (const std::exception& exception) {
-		spdlog::error(exception.what());
+		brayjl::Logger::error(exception.what());
 		std::cin.get();
 
 		return EXIT_FAILURE;

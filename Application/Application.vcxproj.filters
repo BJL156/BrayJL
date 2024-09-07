@@ -30,4 +30,8 @@
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaders\Model.vert" />
+    <None Include="Resources\Shaders\Model.frag" />
+  </ItemGroup>
 </Project>
