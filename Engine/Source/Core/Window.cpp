@@ -21,6 +21,18 @@ namespace brayjl {
         return glfwWindowShouldClose(m_window);
     }
 
+    std::uint32_t Window::getWidth() const {
+        return m_width;
+    }
+
+    std::uint32_t Window::getHeight() const {
+        return m_height;
+    }
+
+    GLFWwindow* Window::getWindow() const {
+        return m_window;
+    }
+
     void Window::update() {
         glfwPollEvents();
         glfwSwapBuffers(m_window);

@@ -21,17 +21,21 @@ project "Application"
 		"%{wks.location}/Vendor/spdlog/include",
 		"%{wks.location}/Vendor/glfw/include",
 		"%{wks.location}/Vendor/glad/include",
-		"%{wks.location}/Vendor/glm/include"
+		"%{wks.location}/Vendor/glm/include",
+		"%{wks.location}/Vendor/assimp/include",
+		"%{wks.location}/Vendor/stb/include"
 	}
 
 	libdirs {
-		"%{wks.location}/vendor/glfw/lib"
+		"%{wks.location}/vendor/glfw/lib",
+		"%{wks.location}/vendor/assimp/lib"
 	}
 
 	links {
 		"Engine",
 		"glfw3",
-		"opengl32"
+		"opengl32",
+		"assimp-vc143-mt"
 	}
 
 	filter "system:windows"

@@ -22,6 +22,10 @@ namespace brayjl {
 		void update();
 
 		bool shouldClose() const;
+
+		std::uint32_t getWidth() const;
+		std::uint32_t getHeight() const;
+		GLFWwindow* getWindow() const;
 	private:
 		void createGlfwWindow();
 		void initializeGlad();
