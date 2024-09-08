@@ -65,6 +65,8 @@
     <ClCompile Include="Source\Graphics\Shader.cpp">
       <Filter>Source\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Graphics\Stb.cpp" />
+    <ClCompile Include="Source\Graphics\Stb.cpp">
+      <Filter>Source\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

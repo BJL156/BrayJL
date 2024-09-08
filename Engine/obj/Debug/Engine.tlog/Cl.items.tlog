@@ -1,8 +1,8 @@
-D:\dev\engine\brayjl\vendor\glad\include\glad.c;D:\dev\engine\brayjl\Engine\obj\Debug\glad.obj
-D:\dev\engine\brayjl\Engine\Source\Core\Logger.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Logger.obj
-D:\dev\engine\brayjl\Engine\Source\Core\Utilities.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Utilities.obj
-D:\dev\engine\brayjl\Engine\Source\Core\Window.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Window.obj
-D:\dev\engine\brayjl\Engine\Source\Graphics\Mesh.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Mesh.obj
-D:\dev\engine\brayjl\Engine\Source\Graphics\Model.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Model.obj
-D:\dev\engine\brayjl\Engine\Source\Graphics\Shader.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Shader.obj
-D:\dev\engine\brayjl\Engine\Source\Graphics\Stb.cpp;D:\dev\engine\brayjl\Engine\obj\Debug\Stb.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\vendor\glad\include\glad.c;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\glad.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\Engine\Source\Core\Logger.cpp;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\Logger.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\Engine\Source\Core\Utilities.cpp;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\Utilities.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\Engine\Source\Core\Window.cpp;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\Window.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\Engine\Source\Graphics\Mesh.cpp;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\Mesh.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\Engine\Source\Graphics\Model.cpp;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\Model.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\Engine\Source\Graphics\Shader.cpp;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\Shader.obj
+C:\Users\bjl15\Downloads\test2\BrayJL\Engine\Source\Graphics\Stb.cpp;C:\Users\bjl15\Downloads\test2\BrayJL\Engine\obj\Debug\Stb.obj

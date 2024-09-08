@@ -1,2 +1,7 @@
-﻿  Application.cpp
-  Application.vcxproj -> D:\dev\engine\brayjl\Bin\Debug\x86_64\Application.exe
+﻿  glad.c
+  Application.cpp
+  Main.cpp
+  Generating Code...
+  LINK : ..\Bin\Debug\x86_64\Application.exe not found or not built by the last incremental link; performing full link
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Application.vcxproj -> C:\Users\bjl15\Downloads\test2\BrayJL\Bin\Debug\x86_64\Application.exe
