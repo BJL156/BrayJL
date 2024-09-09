@@ -25,8 +25,8 @@ private:
 	glm::vec3 m_right		= { 0.0, 0.0, 0.0 };
 	glm::vec3 m_position	= { 0.0, 0.0, 0.0 };
 	glm::mat4 m_viewMatrix	= glm::mat4(1.0);
-	float m_speed = 0.1;
-	float m_lookSpeed = 0.5;
+	float m_speed = 2.5f;
+	float m_lookSpeed = 50.0f;
 	float m_yaw = -90.0;
 	float m_pitch = 0.0;
 };

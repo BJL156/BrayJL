@@ -10,6 +10,9 @@
     <Filter Include="Source\Graphics">
       <UniqueIdentifier>{56D4EE92-C25F-5C57-CB70-DF4B377BB857}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Platform">
+      <UniqueIdentifier>{6A48A913-D6D3-16D8-DFE4-99CC4BEF72D8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -27,9 +30,6 @@
     <ClInclude Include="Source\Core\Utilities.h">
       <Filter>Source\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Platform\Window.h">
-      <Filter>Source\Core</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Engine.h">
       <Filter>Source</Filter>
     </ClInclude>
@@ -42,7 +42,12 @@
     <ClInclude Include="Source\Graphics\Shader.h">
       <Filter>Source\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Platform\InputHandler.h" />
+    <ClInclude Include="Source\Platform\InputHandler.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\Window.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
@@ -52,9 +57,6 @@
       <Filter>Source\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\Utilities.cpp">
-      <Filter>Source\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Graphics\Mesh.cpp">
@@ -69,6 +71,11 @@
     <ClCompile Include="Source\Graphics\Stb.cpp">
       <Filter>Source\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Platform\InputHandler.cpp" />
+    <ClCompile Include="Source\Platform\InputHandler.cpp">
+      <Filter>Source\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Window.cpp">
+      <Filter>Source\Platform</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

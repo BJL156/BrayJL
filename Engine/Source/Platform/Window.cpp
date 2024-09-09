@@ -38,6 +38,8 @@ namespace brayjl {
     }
 
     void Window::update() {
+        updateDeltaTime();
+
         glfwPollEvents();
         glfwSwapBuffers(m_window);
 
@@ -72,6 +74,8 @@ namespace brayjl {
 
         glfwMakeContextCurrent(m_window);
 
+        glfwSwapInterval(0);
+
         glfwSetWindowUserPointer(m_window, this);
         glfwSetFramebufferSizeCallback(m_window, framebufferResizeCallback);
     }
@@ -84,8 +88,6 @@ namespace brayjl {
     }
 
     void Window::enableGLFeatures() {
-        updateDeltaTime();
-
         glViewport(0, 0, m_width, m_height);
         glEnable(GL_DEPTH_TEST);
 

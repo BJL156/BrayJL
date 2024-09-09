@@ -1,13 +1,9 @@
-﻿  InputHandler.cpp
+﻿  Window.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-C:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
-  Window.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-C:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
-C:\dev\engine\BrayJL\Engine\Source\Platform\Window.cpp(97,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
+D:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
+D:\dev\engine\BrayJL\Engine\Source\Platform\Window.cpp(99,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 assimp-vc143-mt.lib(assimp-vc143-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
 Model.obj : warning LNK4006: "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z) already defined in assimp-vc143-mt.lib(assimp-vc143-mt.dll); second definition ignored
 Model.obj : warning LNK4006: "public: unsigned int __cdecl aiMaterial::GetTextureCount(enum aiTextureType)const " (?GetTextureCount@aiMaterial@@QEBAIW4aiTextureType@@@Z) already defined in assimp-vc143-mt.lib(assimp-vc143-mt.dll); second definition ignored
 Model.obj : warning LNK4006: "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z) already defined in assimp-vc143-mt.lib(assimp-vc143-mt.dll); second definition ignored
-  Engine.vcxproj -> C:\dev\engine\BrayJL\Bin\Debug\x86_64\Engine.lib
+  Engine.vcxproj -> D:\dev\engine\BrayJL\Bin\Debug\x86_64\Engine.lib

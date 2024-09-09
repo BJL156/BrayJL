@@ -1,6 +1,8 @@
 #include "Application.h"
 
 void Application::run() {
+	brayjl::InputHandler::initialize(m_window);
+
 	brayjl::Shader shader{	"Resources/Shaders/Model.vert",
 							"Resources/Shaders/Model.frag"};
 

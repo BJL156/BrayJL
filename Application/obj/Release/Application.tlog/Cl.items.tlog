@@ -1,3 +1,4 @@
-D:\dev\engine\brayjl\vendor\glad\include\glad.c;D:\dev\engine\brayjl\Application\obj\Release\glad.obj
-D:\dev\engine\brayjl\Application\Source\Application.cpp;D:\dev\engine\brayjl\Application\obj\Release\Application.obj
-D:\dev\engine\brayjl\Application\Source\Main.cpp;D:\dev\engine\brayjl\Application\obj\Release\Main.obj
+D:\dev\engine\BrayJL\vendor\glad\include\glad.c;D:\dev\engine\BrayJL\Application\obj\Release\glad.obj
+D:\dev\engine\BrayJL\Application\Source\Application.cpp;D:\dev\engine\BrayJL\Application\obj\Release\Application.obj
+D:\dev\engine\BrayJL\Application\Source\Camera.cpp;D:\dev\engine\BrayJL\Application\obj\Release\Camera.obj
+D:\dev\engine\BrayJL\Application\Source\Main.cpp;D:\dev\engine\BrayJL\Application\obj\Release\Main.obj

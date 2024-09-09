@@ -101,23 +101,23 @@
   <ItemGroup>
     <ClInclude Include="Source\Core\Logger.h" />
     <ClInclude Include="Source\Core\Utilities.h" />
-    <ClInclude Include="Source\Platform\InputHandler.h" />
-    <ClInclude Include="Source\Platform\Window.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\Graphics\Mesh.h" />
     <ClInclude Include="Source\Graphics\Model.h" />
     <ClInclude Include="Source\Graphics\Shader.h" />
+    <ClInclude Include="Source\Platform\InputHandler.h" />
+    <ClInclude Include="Source\Platform\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c" />
     <ClCompile Include="Source\Core\Logger.cpp" />
     <ClCompile Include="Source\Core\Utilities.cpp" />
-    <ClCompile Include="Source\Platform\InputHandler.cpp" />
-    <ClCompile Include="Source\Platform\Window.cpp" />
     <ClCompile Include="Source\Graphics\Mesh.cpp" />
     <ClCompile Include="Source\Graphics\Model.cpp" />
     <ClCompile Include="Source\Graphics\Shader.cpp" />
     <ClCompile Include="Source\Graphics\Stb.cpp" />
+    <ClCompile Include="Source\Platform\InputHandler.cpp" />
+    <ClCompile Include="Source\Platform\Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

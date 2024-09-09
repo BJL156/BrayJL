@@ -1,12 +1,5 @@
-﻿  glad.c
-  Utilities.cpp
-  Window.cpp
+﻿  InputHandler.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-D:\dev\engine\brayjl\vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
-  Mesh.cpp
-  Model.cpp
-  Shader.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-D:\dev\engine\brayjl\vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
-  Generating Code...
-  Engine.vcxproj -> D:\dev\engine\brayjl\bin\Release\x86_64\Engine.lib
+D:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
+assimp-vc143-mt.lib(assimp-vc143-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+  Engine.vcxproj -> D:\dev\engine\BrayJL\Bin\Release\x86_64\Engine.lib

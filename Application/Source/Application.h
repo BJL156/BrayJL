@@ -12,7 +12,7 @@ public:
 
 	void run();
 private:
-	brayjl::Window m_window{ 800, 600, "BrayJL Engine" };
+	brayjl::Window m_window{ 1280, 720, "BrayJL Engine" };
 };
 
 #endif
