@@ -27,7 +27,7 @@
     <ClInclude Include="Source\Core\Utilities.h">
       <Filter>Source\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Core\Window.h">
+    <ClInclude Include="Source\Platform\Window.h">
       <Filter>Source\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine.h">
@@ -42,6 +42,7 @@
     <ClInclude Include="Source\Graphics\Shader.h">
       <Filter>Source\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Platform\InputHandler.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
@@ -53,7 +54,7 @@
     <ClCompile Include="Source\Core\Utilities.cpp">
       <Filter>Source\Core</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\Window.cpp">
+    <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Graphics\Mesh.cpp">
@@ -68,5 +69,6 @@
     <ClCompile Include="Source\Graphics\Stb.cpp">
       <Filter>Source\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Platform\InputHandler.cpp" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,5 @@
-﻿  glad.c
-  Application.cpp
-  Main.cpp
-  Generating Code...
-  LINK : ..\Bin\Debug\x86_64\Application.exe not found or not built by the last incremental link; performing full link
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Application.vcxproj -> C:\Users\bjl15\Downloads\test2\BrayJL\Bin\Debug\x86_64\Application.exe
+﻿  Camera.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+C:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
+C:\dev\engine\BrayJL\Application\Source\Camera.h(28,8): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Application.vcxproj -> C:\dev\engine\BrayJL\Bin\Debug\x86_64\Application.exe

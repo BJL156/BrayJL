@@ -6,7 +6,9 @@
 
 #include "Core/Logger.h"
 #include "Core/Utilities.h"
-#include "Core/Window.h"
+
+#include "Platform/InputHandler.h"
+#include "Platform/Window.h"
 
 #include "Graphics/Shader.h"
 #include "Graphics/Mesh.h"

@@ -3,6 +3,8 @@
 
 #include "Engine.h"
 
+#include "Camera.h"
+
 class Application {
 public:
 	Application() = default;

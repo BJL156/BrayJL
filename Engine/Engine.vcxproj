@@ -101,7 +101,8 @@
   <ItemGroup>
     <ClInclude Include="Source\Core\Logger.h" />
     <ClInclude Include="Source\Core\Utilities.h" />
-    <ClInclude Include="Source\Core\Window.h" />
+    <ClInclude Include="Source\Platform\InputHandler.h" />
+    <ClInclude Include="Source\Platform\Window.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\Graphics\Mesh.h" />
     <ClInclude Include="Source\Graphics\Model.h" />
@@ -111,7 +112,8 @@
     <ClCompile Include="..\vendor\glad\include\glad.c" />
     <ClCompile Include="Source\Core\Logger.cpp" />
     <ClCompile Include="Source\Core\Utilities.cpp" />
-    <ClCompile Include="Source\Core\Window.cpp" />
+    <ClCompile Include="Source\Platform\InputHandler.cpp" />
+    <ClCompile Include="Source\Platform\Window.cpp" />
     <ClCompile Include="Source\Graphics\Mesh.cpp" />
     <ClCompile Include="Source\Graphics\Model.cpp" />
     <ClCompile Include="Source\Graphics\Shader.cpp" />
