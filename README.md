@@ -4,6 +4,12 @@ Simple game engine using OpenGL and C++.
 ## The Idea
 The idea for BrayJL is to create a simple 3D game engine that is fast and lightweight compared to other commercial game engines.
 
+## Credits
+Right now BrayJL is using temporary assets for testing functionality as we develop the engine. Here is a list of the asset creators:
+#### 3D models
+- [Knight Artorias and Great Grey Wolf Sif](https://sketchfab.com/3d-models/knight-artorias-and-great-grey-wolf-sif-bdf57355f95a420fa0c5b3e924bea16d) by [9S](https://sketchfab.com/NlNES)
+- [Tifa Lockhart (FF:VII) (HD)](https://sketchfab.com/3d-models/tifa-lockhart-ffvii-hd-682acb22cd84435b8f4a1e5d6dc3598d) by [Senpai-3689](https://sketchfab.com/Senpai3689)
+
 ## Build
 Currently, BrayJL only supports Windows.
 
