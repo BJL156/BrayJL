@@ -1,8 +1,8 @@
 #include "InputHandler.h"
 
 namespace brayjl {
-	bool InputHandler::m_keys[GLFW_KEY_LAST];
-	bool InputHandler::m_mouseButtons[GLFW_MOUSE_BUTTON_LAST];
+	bool InputHandler::m_keys[static_cast<int>(Key::LAST)];
+	bool InputHandler::m_mouseButtons[static_cast<int>(Mouse::LAST)];
 
 	double InputHandler::m_scrollOffsetX;
 	double InputHandler::m_scrollOffsetY;
@@ -12,52 +12,52 @@ namespace brayjl {
 	void InputHandler::initialize(Window& window) {
 		m_window = &window;
 
-		for (std::size_t i = 0; i < GLFW_KEY_LAST; ++i) {
+		for (std::size_t i = 0; i < static_cast<int>(Key::LAST); ++i) {
 			m_keys[i] = false;
 		}
 
-		for (std::size_t i = 0; i < GLFW_MOUSE_BUTTON_LAST; ++i) {
+		for (std::size_t i = 0; i < static_cast<int>(Mouse::LAST); ++i) {
 			m_mouseButtons[i] = false;
 		}
 
 		glfwSetScrollCallback(window.getWindow(), scrollCallback);
 	}
 
-	bool InputHandler::isKeyDown(std::uint32_t code) {
-		return glfwGetKey(m_window->getWindow(), code) == GLFW_PRESS;
+	bool InputHandler::isKeyDown(const Key& keyCode) {
+		return glfwGetKey(m_window->getWindow(), static_cast<int>(keyCode)) == GLFW_PRESS;
 	}
 
-	bool InputHandler::isKeyUp(std::uint32_t code) {
-		return glfwGetKey(m_window->getWindow(), code) == GLFW_RELEASE;
+	bool InputHandler::isKeyUp(const Key& keyCode) {
+		return glfwGetKey(m_window->getWindow(), static_cast<int>(keyCode)) == GLFW_RELEASE;
 	}
 
-	bool InputHandler::isKeyPressed(std::uint32_t code) {
-		if (isKeyDown(code) && !m_keys[code]) {
-			m_keys[code] = true;
+	bool InputHandler::isKeyPressed(const Key& keyCode) {
+		if (isKeyDown(keyCode) && !m_keys[static_cast<int>(keyCode)]) {
+			m_keys[static_cast<int>(keyCode)] = true;
 			return true;
 		}
-		else if (isKeyUp(code)) {
-			m_keys[code] = false;
+		else if (isKeyUp(keyCode)) {
+			m_keys[static_cast<int>(keyCode)] = false;
 		}
 
 		return false;
 	}
 
-	bool InputHandler::isMouseButtonDown(std::uint32_t code) {
-		return glfwGetMouseButton(m_window->getWindow(), code) == GLFW_PRESS;
+	bool InputHandler::isMouseButtonDown(const Mouse& mouseCode) {
+		return glfwGetMouseButton(m_window->getWindow(), static_cast<int>(mouseCode)) == GLFW_PRESS;
 	}
 
-	bool InputHandler::isMouseButtonUp(std::uint32_t code) {
-		return glfwGetMouseButton(m_window->getWindow(), code) == GLFW_RELEASE;
+	bool InputHandler::isMouseButtonUp(const Mouse& mouseCode) {
+		return glfwGetMouseButton(m_window->getWindow(), static_cast<int>(mouseCode)) == GLFW_RELEASE;
 	}
 
-	bool InputHandler::isMouseButtonPressed(std::uint32_t code) {
-		if (isMouseButtonDown(code) && !m_mouseButtons[code]) {
-			m_mouseButtons[code] = true;
+	bool InputHandler::isMouseButtonPressed(const Mouse& mouseCode) {
+		if (isMouseButtonDown(mouseCode) && !m_mouseButtons[static_cast<int>(mouseCode)]) {
+			m_mouseButtons[static_cast<int>(mouseCode)] = true;
 			return true;
 		}
-		else if (isMouseButtonUp(code)) {
-			m_mouseButtons[code] = false;
+		else if (isMouseButtonUp(mouseCode)) {
+			m_mouseButtons[static_cast<int>(mouseCode)] = false;
 		}
 
 		return false;
@@ -69,11 +69,11 @@ namespace brayjl {
 		return { xpos, ypos };
 	}
 
-	void InputHandler::setScrollOffsetX(double offset) {
+	void InputHandler::setScrollOffsetX(const double& offset) {
 		m_scrollOffsetX = offset;
 	}
 
-	void InputHandler::setScrollOffsetY(double offset) {
+	void InputHandler::setScrollOffsetY(const double& offset) {
 		m_scrollOffsetY = offset;
 	}
 

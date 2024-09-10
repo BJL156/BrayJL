@@ -28,20 +28,20 @@ void Camera::updateVectors() {
 }
 
 void Camera::updatePosition(const brayjl::Window& window, const float& deltaTime) {
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_W)) m_position += m_front * m_speed * deltaTime;
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_A)) m_position -= m_right * m_speed * deltaTime;
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_S)) m_position -= m_front * m_speed * deltaTime;
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_D)) m_position += m_right * m_speed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::W)) m_position += m_front * m_speed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::A)) m_position -= m_right * m_speed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::S)) m_position -= m_front * m_speed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::D)) m_position += m_right * m_speed * deltaTime;
 
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_Q)) m_position.y -= m_speed * deltaTime;
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_E)) m_position.y += m_speed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::Q)) m_position.y -= m_speed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::E)) m_position.y += m_speed * deltaTime;
 }
 
 void Camera::updateDirection(const brayjl::Window& window, const float& deltaTime) {
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_UP))		m_pitch += m_lookSpeed * deltaTime;
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_LEFT))		m_yaw -= m_lookSpeed * deltaTime;
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_RIGHT))	m_yaw += m_lookSpeed * deltaTime;
-	if (brayjl::InputHandler::isKeyDown(GLFW_KEY_DOWN))		m_pitch -= m_lookSpeed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::UP))		m_pitch += m_lookSpeed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::LEFT))		m_yaw -= m_lookSpeed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::RIGHT))	m_yaw += m_lookSpeed * deltaTime;
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::DOWN))		m_pitch -= m_lookSpeed * deltaTime;
 
 	m_pitch = glm::clamp(m_pitch, -89.0f, 89.0f);
 }

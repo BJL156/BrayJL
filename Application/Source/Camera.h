@@ -6,6 +6,7 @@
 
 #include "Platform/InputHandler.h"
 #include "Platform/Window.h"
+#include "Platform/InputCodes.h"
 
 class Camera {
 public:

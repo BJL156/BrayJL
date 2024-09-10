@@ -9,6 +9,7 @@
 
 #include "Platform/InputHandler.h"
 #include "Platform/Window.h"
+#include "Platform/InputCodes.h"
 
 #include "Graphics/Shader.h"
 #include "Graphics/Mesh.h"

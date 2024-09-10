@@ -105,6 +105,7 @@
     <ClInclude Include="Source\Graphics\Mesh.h" />
     <ClInclude Include="Source\Graphics\Model.h" />
     <ClInclude Include="Source\Graphics\Shader.h" />
+    <ClInclude Include="Source\Platform\InputCodes.h" />
     <ClInclude Include="Source\Platform\InputHandler.h" />
     <ClInclude Include="Source\Platform\Window.h" />
   </ItemGroup>
