@@ -1,7 +1,7 @@
 #ifndef INPUT_CODES_H
 #define INPUT_CODES_H
 
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 namespace brayjl {
 	enum class Key {

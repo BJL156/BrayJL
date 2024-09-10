@@ -49,6 +49,11 @@
       <Filter>Source\Platform</Filter>
     </ClInclude>
     <ClInclude Include="Source\Platform\InputCodes.h" />
+    <ClInclude Include="Source\Core\TransformComponent.h" />
+    <ClInclude Include="Source\Core\ModelComponent.h" />
+    <ClInclude Include="Source\Core\ComponentManager.h" />
+    <ClInclude Include="Source\Core\RenderSystem.h" />
+    <ClInclude Include="Source\Core\EntityManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
@@ -78,5 +83,7 @@
     <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Platform</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\EntityManager.cpp" />
+    <ClCompile Include="Source\Core\RenderSystem.cpp" />
   </ItemGroup>
 </Project>

@@ -6,6 +6,9 @@
 
 #include "Core/Logger.h"
 #include "Core/Utilities.h"
+#include "Core/EntityManager.h"
+#include "Core/ComponentManager.h"
+#include "Core/RenderSystem.h"
 
 #include "Platform/InputHandler.h"
 #include "Platform/Window.h"
