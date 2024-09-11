@@ -38,6 +38,7 @@ namespace brayjl {
     }
 
     void Window::update() {
+        updateFPS();
         updateDeltaTime();
 
         glfwPollEvents();
@@ -93,6 +94,21 @@ namespace brayjl {
 
         glEnable(GL_CULL_FACE);
         glCullFace(GL_BACK);
+    }
+
+    void Window::updateFPS() {
+        double currentFrameTime = glfwGetTime();
+
+        m_frameCount++;
+
+        if (currentFrameTime - m_prevFPSUpdateTime >= 1.0) {
+            m_fps = m_frameCount / (currentFrameTime - m_prevFPSUpdateTime);
+            std::string newName = m_name + " | fps: " + std::to_string(m_fps);
+            glfwSetWindowTitle(m_window, newName.c_str());
+
+            m_frameCount = 0;
+            m_prevFPSUpdateTime = currentFrameTime;
+        }
     }
 
     void Window::updateDeltaTime() {

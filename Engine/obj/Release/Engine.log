@@ -1,5 +1,12 @@
-﻿  RenderSystem.cpp
+﻿  InputHandler.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
 D:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
+  Window.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
+D:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
+D:\dev\engine\BrayJL\Engine\Source\Platform\Window.cpp(105,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dev\engine\BrayJL\Engine\Source\Platform\Window.cpp(110,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\dev\engine\BrayJL\Engine\Source\Platform\Window.cpp(115,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
 assimp-vc143-mt.lib(assimp-vc143-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
   Engine.vcxproj -> D:\dev\engine\BrayJL\Bin\Release\x86_64\Engine.lib

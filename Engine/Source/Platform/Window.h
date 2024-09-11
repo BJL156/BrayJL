@@ -32,6 +32,7 @@ namespace brayjl {
 		void initializeGlad();
 		void enableGLFeatures();
 
+		void updateFPS();
 		void updateDeltaTime();
 
 		static void framebufferResizeCallback(GLFWwindow* window, int width, int height);
@@ -43,6 +44,10 @@ namespace brayjl {
 
 		float m_prevFrameTime;
 		float m_deltaTime;
+
+		float m_frameCount;
+		float m_fps;
+		float m_prevFPSUpdateTime;
 	};
 }
 
