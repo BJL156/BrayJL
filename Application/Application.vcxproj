@@ -46,6 +46,7 @@
     <IntDir>obj\Debug\</IntDir>
     <TargetName>Application</TargetName>
     <TargetExt>.exe</TargetExt>
+    <ExternalIncludePath>..\Vendor\imgui\include;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,13 +54,14 @@
     <IntDir>obj\Release\</IntDir>
     <TargetName>Application</TargetName>
     <TargetExt>.exe</TargetExt>
+    <ExternalIncludePath>..\Vendor\imgui\include;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;..\Engine\source;..\Vendor\spdlog\include;..\Vendor\glfw\include;..\Vendor\glad\include;..\Vendor\glm\include;..\Vendor\assimp\include;..\Vendor\stb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;..\Engine\source;..\Vendor\spdlog\include;..\Vendor\glfw\include;..\Vendor\glad\include;..\Vendor\glm\include;..\Vendor\assimp\include;..\Vendor\stb\include;..\Vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -78,7 +80,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;..\Engine\source;..\Vendor\spdlog\include;..\Vendor\glfw\include;..\Vendor\glad\include;..\Vendor\glm\include;..\Vendor\assimp\include;..\Vendor\stb\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;..\Engine\source;..\Vendor\spdlog\include;..\Vendor\glfw\include;..\Vendor\glad\include;..\Vendor\glm\include;..\Vendor\assimp\include;..\Vendor\stb\include;..\Vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -101,6 +103,13 @@
     <ClInclude Include="Source\Camera.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui.cpp" />
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_widgets.cpp" />
     <ClCompile Include="..\vendor\glad\include\glad.c" />
     <ClCompile Include="Source\Application.cpp" />
     <ClCompile Include="Source\Camera.cpp" />

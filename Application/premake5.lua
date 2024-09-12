@@ -12,7 +12,8 @@ project "Application"
 		"Source/**.cpp",
 		"Resources/**.vert",
 		"Resources/**.frag",
-		"%{wks.location}/vendor/glad/include/glad.c"
+		"%{wks.location}/vendor/glad/include/glad.c",
+		"%{wks.location}/Vendor/imgui/include/**.cpp"
 	}
 
 	includedirs {
@@ -23,7 +24,19 @@ project "Application"
 		"%{wks.location}/Vendor/glad/include",
 		"%{wks.location}/Vendor/glm/include",
 		"%{wks.location}/Vendor/assimp/include",
-		"%{wks.location}/Vendor/stb/include"
+		"%{wks.location}/Vendor/stb/include",
+		"%{wks.location}/Vendor/imgui/include"
+	}
+
+	externalincludedirs {
+		"%{wks.location}/Vendor/imgui/include"
+	}
+
+	vpaths {
+		["External Libraries"] = { 
+			"%{wks.location}/Vendor/imgui/include/**.h",
+			"%{wks.location}/Vendor/imgui/include/**.cpp"
+		},
 	}
 
 	libdirs {

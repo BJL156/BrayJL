@@ -24,7 +24,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Core\ComponentManager.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\EntityManager.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Core\Logger.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\ModelComponent.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\RenderSystem.h">
+      <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\TransformComponent.h">
       <Filter>Source\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\Utilities.h">
@@ -32,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="Source\Engine.h">
       <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\Framebuffer.h">
+      <Filter>Source\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Source\Graphics\Mesh.h">
       <Filter>Source\Graphics</Filter>
@@ -42,29 +60,34 @@
     <ClInclude Include="Source\Graphics\Shader.h">
       <Filter>Source\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Platform\InputCodes.h">
+      <Filter>Source\Platform</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Platform\InputHandler.h">
       <Filter>Source\Platform</Filter>
     </ClInclude>
     <ClInclude Include="Source\Platform\Window.h">
       <Filter>Source\Platform</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Platform\InputCodes.h" />
-    <ClInclude Include="Source\Core\TransformComponent.h" />
-    <ClInclude Include="Source\Core\ModelComponent.h" />
-    <ClInclude Include="Source\Core\ComponentManager.h" />
-    <ClInclude Include="Source\Core\RenderSystem.h" />
-    <ClInclude Include="Source\Core\EntityManager.h" />
-    <ClInclude Include="Source\Graphics\Framebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
       <Filter>vendor\glad\include</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\EntityManager.cpp">
+      <Filter>Source\Core</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Core\Logger.cpp">
+      <Filter>Source\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\RenderSystem.cpp">
       <Filter>Source\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\Utilities.cpp">
       <Filter>Source\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Graphics\Framebuffer.cpp">
+      <Filter>Source\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Source\Graphics\Mesh.cpp">
       <Filter>Source\Graphics</Filter>
@@ -84,8 +107,5 @@
     <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Platform</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\EntityManager.cpp" />
-    <ClCompile Include="Source\Core\RenderSystem.cpp" />
-    <ClCompile Include="Source\Graphics\Framebuffer.cpp" />
   </ItemGroup>
 </Project>

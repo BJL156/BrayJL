@@ -1,6 +1,20 @@
 #include "Application.h"
 
+#include <imgui/imgui.h>
+#include <imgui/imgui_impl_glfw.h>
+#include <imgui/imgui_impl_opengl3.h>
+
 void Application::run() {
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	ImGui::StyleColorsDark();
+
+	ImGui_ImplGlfw_InitForOpenGL(m_window.getWindow(), true);
+	ImGui_ImplOpenGL3_Init("#version 460");
+
+	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+
 	brayjl::InputHandler::initialize(m_window);
 
 	brayjl::Shader shader{	"Resources/Shaders/Model.vert",
@@ -56,5 +70,14 @@ void Application::run() {
 		framebuffer.unbind();
 
 		framebuffer.draw();
+
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		ImGui::ShowDemoWindow();
+
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 	}
 }
