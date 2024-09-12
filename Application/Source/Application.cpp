@@ -14,6 +14,38 @@ void Application::run() {
 	ImGui_ImplOpenGL3_Init("#version 460");
 
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+	io.Fonts->AddFontFromFileTTF("Resources/Fonts/Lato/Lato-Bold.ttf", 16.0f);
+
+	ImVec4 textColor = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
+	ImVec4 headerColors = ImVec4(0.025f, 0.025f, 0.025f, 1.0f);
+	ImVec4 windowColor = ImVec4(0.05f, 0.05f, 0.05f, 1.0f);
+	ImVec4 buttonColor = ImVec4(0.1f, 0.1f, 0.1f, 1.0f);
+
+	ImGuiStyle& style = ImGui::GetStyle();
+	style.Colors[ImGuiCol_Text] = textColor;
+	style.Colors[ImGuiCol_WindowBg] = windowColor;
+
+	style.Colors[ImGuiCol_TitleBg] = headerColors;
+	style.Colors[ImGuiCol_TitleBgActive] = headerColors;
+	style.Colors[ImGuiCol_TitleBgCollapsed] = headerColors;
+	style.Colors[ImGuiCol_Header] = headerColors;
+	style.Colors[ImGuiCol_HeaderActive] = headerColors;
+	style.Colors[ImGuiCol_HeaderHovered] = headerColors;
+	style.Colors[ImGuiCol_MenuBarBg] = headerColors;
+	style.Colors[ImGuiCol_ResizeGripActive] = headerColors;
+	style.Colors[ImGuiCol_ResizeGripHovered] = headerColors;
+	style.Colors[ImGuiCol_ResizeGrip] = headerColors;
+
+	style.Colors[ImGuiCol_Button] = buttonColor;
+	style.Colors[ImGuiCol_ButtonActive] = buttonColor;
+	style.Colors[ImGuiCol_ButtonHovered] = buttonColor;
+	style.Colors[ImGuiCol_CheckMark] = buttonColor;
+	style.Colors[ImGuiCol_SliderGrab] = buttonColor;
+	style.Colors[ImGuiCol_SliderGrabActive] = buttonColor;
+
+
+	style.WindowRounding = 4.0f;
+
 
 	brayjl::InputHandler::initialize(m_window);
 
@@ -52,6 +84,7 @@ void Application::run() {
 	}
 
 	brayjl::Framebuffer framebuffer(m_window);
+	brayjl::Framebuffer imguiFramebuffer(m_window);
 
 	while (!m_window.shouldClose()) {
 		m_window.update();
@@ -69,11 +102,45 @@ void Application::run() {
 		renderSystem.render(shader);
 		framebuffer.unbind();
 
+		imguiFramebuffer.bind();
 		framebuffer.draw();
+		imguiFramebuffer.unbind();
+		imguiFramebuffer.draw();
 
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
+		ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
+
+		ImGui::Begin("Viewport");
+		ImVec2 pos = ImGui::GetCursorScreenPos();
+
+		ImVec2 imguiWindowSize = ImGui::GetWindowSize();
+		float aspectRatio = static_cast<float>(m_window.getWidth()) / m_window.getHeight();
+
+		float newWidth;
+		float newHeight;
+		if (imguiWindowSize.x / imguiWindowSize.y > aspectRatio) {
+			newHeight = imguiWindowSize.y;
+			newWidth = imguiWindowSize.y * aspectRatio;
+		}
+		else {
+			newWidth = imguiWindowSize.x;
+			newHeight = imguiWindowSize.x / aspectRatio;
+		}
+
+		ImVec2 cursorPosition = ImGui::GetCursorScreenPos();
+		ImVec2 imagePosition = ImVec2(
+			cursorPosition.x + (imguiWindowSize.x - newWidth) * 0.5f,
+			cursorPosition.y + (imguiWindowSize.y - newHeight) * 0.5f
+		);
+
+		ImGui::GetWindowDrawList()->AddImage(
+			(void*)imguiFramebuffer.getTexture(),
+			imagePosition,
+			ImVec2(imagePosition.x + newWidth, imagePosition.y + newHeight),
+			ImVec2(0, 1), ImVec2(1, 0));
+		ImGui::End();
 
 		ImGui::ShowDemoWindow();
 

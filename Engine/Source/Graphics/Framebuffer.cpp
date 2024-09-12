@@ -61,6 +61,18 @@ namespace brayjl {
 		glBindRenderbuffer(GL_RENDERBUFFER, 0);
 	}
 
+	unsigned int Framebuffer::getFramebuffer() const {
+		return m_framebuffer;
+	}
+
+	unsigned int Framebuffer::getTexture() const {
+		return m_texture;
+	}
+
+	unsigned int Framebuffer::getRenderbuffer() const {
+		return m_renderbuffer;
+	}
+
 	void Framebuffer::createTexture() {
 		glGenTextures(1, &m_texture);
 		glBindTexture(GL_TEXTURE_2D, m_texture);

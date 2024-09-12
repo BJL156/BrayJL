@@ -18,6 +18,10 @@ namespace brayjl {
 		void draw();
 
 		void resize(const std::uint32_t& width, const std::uint32_t& height);
+
+		unsigned int getFramebuffer() const;
+		unsigned int getTexture() const;
+		unsigned int getRenderbuffer() const;
 	private:
 		void createTexture();
 		void createRenderbuffer();
