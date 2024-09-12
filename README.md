@@ -26,3 +26,6 @@ cd BrayJL && .\build.bat
 
 #### 3. Build and run
   Once the solution has been built, open the file `BrayJL.sln`. All that's left is to build the solution either by pressing `CTRL`+`SHIFT`+`B` or by going to `Build > Build Solution`.
+
+# Current GUI (Under Heavy Development)
+![current](https://github.com/user-attachments/assets/8bb338f4-199b-4bd6-93e5-5c775d4f7878)
