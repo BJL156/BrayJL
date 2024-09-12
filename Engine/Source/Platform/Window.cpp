@@ -97,13 +97,18 @@ namespace brayjl {
     }
 
     void Window::updateFPS() {
-        double currentFrameTime = glfwGetTime();
+        float currentFrameTime = static_cast<float>(glfwGetTime());
 
         m_frameCount++;
 
-        if (currentFrameTime - m_prevFPSUpdateTime >= 1.0) {
-            m_fps = m_frameCount / (currentFrameTime - m_prevFPSUpdateTime);
-            std::string newName = m_name + " | fps: " + std::to_string(m_fps);
+        if (currentFrameTime - m_prevFPSUpdateTime >= 1.0f) {
+            const float elapsedTime = currentFrameTime - m_prevFPSUpdateTime;
+
+            m_fps = m_frameCount / elapsedTime;
+            float averageFrameTime = elapsedTime / m_frameCount;
+            float milliseconds = averageFrameTime * 1000.0f;
+
+            std::string newName = m_name + " | fps: " + std::to_string(m_fps) + " ms: " + std::to_string(milliseconds);
             glfwSetWindowTitle(m_window, newName.c_str());
 
             m_frameCount = 0;
