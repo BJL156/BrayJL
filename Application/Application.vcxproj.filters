@@ -49,5 +49,7 @@
     <None Include="Resources\Shaders\Model.vert">
       <Filter>Resources\Shaders</Filter>
     </None>
+    <None Include="Resources\Shaders\Framebuffer.vert" />
+    <None Include="Resources\Shaders\Framebuffer.frag" />
   </ItemGroup>
 </Project>

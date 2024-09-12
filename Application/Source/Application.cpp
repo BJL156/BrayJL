@@ -37,18 +37,24 @@ void Application::run() {
 		componentManager.addComponent(e2, std::move(modelComponent));
 	}
 
+	brayjl::Framebuffer framebuffer(m_window);
+
 	while (!m_window.shouldClose()) {
 		m_window.update();
 
 		camera.update(m_window, m_window.getDeltaTime());
 
 		glm::mat4 viewMatrix = camera.getViewMatrix();
-		glm::mat4 projMatrix = glm::perspective(glm::radians(90.0f), static_cast<float>(m_window.getWidth()) / m_window.getHeight(), 0.1f, 1000.0f);
+		glm::mat4 projMatrix = glm::perspective(glm::radians(camera.getFov()), static_cast<float>(m_window.getWidth()) / m_window.getHeight(), 0.1f, 1000.0f);
 
 		shader.use();
 		shader.setMat4("view", viewMatrix);
 		shader.setMat4("proj", projMatrix);
 
+		framebuffer.bind();
 		renderSystem.render(shader);
+		framebuffer.unbind();
+
+		framebuffer.draw();
 	}
 }

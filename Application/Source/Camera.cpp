@@ -1,19 +1,24 @@
 #include "Camera.h"
 
-glm::mat4 Camera::getViewMatrix() const {
-	return m_viewMatrix;
-}
-
 void Camera::update(const brayjl::Window& window, const float& deltaTime) {
 	updateVectors();
 	updatePosition(window, deltaTime);
 	updateDirection(window, deltaTime);
+	updateZoom(deltaTime);
 
 	m_viewMatrix = glm::lookAt(
 		m_position,
 		m_position + m_front,
 		m_up
 	);
+}
+
+glm::mat4 Camera::getViewMatrix() const {
+	return m_viewMatrix;
+}
+
+float Camera::getFov() const {
+	return m_fov;
 }
 
 void Camera::updateVectors() {
@@ -44,4 +49,9 @@ void Camera::updateDirection(const brayjl::Window& window, const float& deltaTim
 	if (brayjl::InputHandler::isKeyDown(brayjl::Key::DOWN))		m_pitch -= m_lookSpeed * deltaTime;
 
 	m_pitch = glm::clamp(m_pitch, -89.0f, 89.0f);
+}
+
+void Camera::updateZoom(const float& deltaTime) {
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::Z)) m_fov = glm::clamp(m_fov - m_zoomSpeed * deltaTime, 1.0f, m_maxFov);
+	if (brayjl::InputHandler::isKeyDown(brayjl::Key::X)) m_fov = glm::clamp(m_fov + m_zoomSpeed * deltaTime, 1.0f, m_maxFov);
 }

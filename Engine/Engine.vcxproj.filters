@@ -54,6 +54,7 @@
     <ClInclude Include="Source\Core\ComponentManager.h" />
     <ClInclude Include="Source\Core\RenderSystem.h" />
     <ClInclude Include="Source\Core\EntityManager.h" />
+    <ClInclude Include="Source\Graphics\Framebuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
@@ -85,5 +86,6 @@
     </ClCompile>
     <ClCompile Include="Source\Core\EntityManager.cpp" />
     <ClCompile Include="Source\Core\RenderSystem.cpp" />
+    <ClCompile Include="Source\Graphics\Framebuffer.cpp" />
   </ItemGroup>
 </Project>

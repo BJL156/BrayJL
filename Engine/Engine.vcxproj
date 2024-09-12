@@ -107,6 +107,7 @@
     <ClInclude Include="Source\Core\TransformComponent.h" />
     <ClInclude Include="Source\Core\Utilities.h" />
     <ClInclude Include="Source\Engine.h" />
+    <ClInclude Include="Source\Graphics\Framebuffer.h" />
     <ClInclude Include="Source\Graphics\Mesh.h" />
     <ClInclude Include="Source\Graphics\Model.h" />
     <ClInclude Include="Source\Graphics\Shader.h" />
@@ -120,6 +121,7 @@
     <ClCompile Include="Source\Core\Logger.cpp" />
     <ClCompile Include="Source\Core\RenderSystem.cpp" />
     <ClCompile Include="Source\Core\Utilities.cpp" />
+    <ClCompile Include="Source\Graphics\Framebuffer.cpp" />
     <ClCompile Include="Source\Graphics\Mesh.cpp" />
     <ClCompile Include="Source\Graphics\Model.cpp" />
     <ClCompile Include="Source\Graphics\Shader.cpp" />

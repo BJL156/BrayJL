@@ -1,6 +1,9 @@
 D:\dev\engine\BrayJL\vendor\glad\include\glad.c;D:\dev\engine\BrayJL\Engine\obj\Debug\glad.obj
+D:\dev\engine\BrayJL\Engine\Source\Core\EntityManager.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\EntityManager.obj
 D:\dev\engine\BrayJL\Engine\Source\Core\Logger.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\Logger.obj
+D:\dev\engine\BrayJL\Engine\Source\Core\RenderSystem.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\RenderSystem.obj
 D:\dev\engine\BrayJL\Engine\Source\Core\Utilities.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\Utilities.obj
+D:\dev\engine\BrayJL\Engine\Source\Graphics\Framebuffer.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\Framebuffer.obj
 D:\dev\engine\BrayJL\Engine\Source\Graphics\Mesh.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\Mesh.obj
 D:\dev\engine\BrayJL\Engine\Source\Graphics\Model.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\Model.obj
 D:\dev\engine\BrayJL\Engine\Source\Graphics\Shader.cpp;D:\dev\engine\BrayJL\Engine\obj\Debug\Shader.obj

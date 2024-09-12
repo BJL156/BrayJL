@@ -17,5 +17,6 @@
 #include "Graphics/Shader.h"
 #include "Graphics/Mesh.h"
 #include "Graphics/Model.h"
+#include "Graphics/Framebuffer.h"
 
 #endif
