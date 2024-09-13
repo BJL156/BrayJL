@@ -24,8 +24,7 @@ namespace brayjl {
 				number = std::to_string(specularNum++);
 			}
 
-			int j = i;
-			shader.setInt(("material." + name + number).c_str(), j);
+			shader.setInt(("material." + name + number).c_str(), i);
 			glBindTexture(GL_TEXTURE_2D, textures[i].id);
 		}
 

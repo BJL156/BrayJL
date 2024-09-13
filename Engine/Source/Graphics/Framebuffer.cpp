@@ -112,7 +112,7 @@ namespace brayjl {
 			1.0f, 1.0f,		1.0f, 1.0f
 		};
 
-		const int indices[] = {
+		const unsigned int indices[] = {
 			0, 1, 2,
 			2, 3, 0
 		};

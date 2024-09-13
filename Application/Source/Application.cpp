@@ -14,7 +14,7 @@ void Application::run() {
 	ImGui_ImplOpenGL3_Init("#version 460");
 
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-	io.Fonts->AddFontFromFileTTF("Resources/Fonts/Lato/Lato-Bold.ttf", 16.0f);
+	io.Fonts->AddFontFromFileTTF("Resources/Fonts/Lato/Lato-Bold.ttf", 20.0f);
 
 	ImVec4 textColor = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
 	ImVec4 headerColors = ImVec4(0.025f, 0.025f, 0.025f, 1.0f);
@@ -23,6 +23,7 @@ void Application::run() {
 
 	ImGuiStyle& style = ImGui::GetStyle();
 	style.Colors[ImGuiCol_Text] = textColor;
+	style.Colors[ImGuiCol_TextDisabled] = ImVec4(textColor.x / 0.1f, textColor.y / 0.1f, textColor.z / 0.1f, 1.0f);
 	style.Colors[ImGuiCol_WindowBg] = windowColor;
 
 	style.Colors[ImGuiCol_TitleBg] = headerColors;
@@ -35,14 +36,19 @@ void Application::run() {
 	style.Colors[ImGuiCol_ResizeGripActive] = headerColors;
 	style.Colors[ImGuiCol_ResizeGripHovered] = headerColors;
 	style.Colors[ImGuiCol_ResizeGrip] = headerColors;
+	style.Colors[ImGuiCol_ChildBg] = headerColors;
+	style.Colors[ImGuiCol_TabActive] = headerColors;
+	style.Colors[ImGuiCol_TabHovered] = headerColors;
+	style.Colors[ImGuiCol_TabUnfocused] = headerColors;
+	style.Colors[ImGuiCol_TabUnfocusedActive] = headerColors;
 
 	style.Colors[ImGuiCol_Button] = buttonColor;
 	style.Colors[ImGuiCol_ButtonActive] = buttonColor;
 	style.Colors[ImGuiCol_ButtonHovered] = buttonColor;
 	style.Colors[ImGuiCol_CheckMark] = buttonColor;
+	style.Colors[ImGuiCol_Tab] = buttonColor;
 	style.Colors[ImGuiCol_SliderGrab] = buttonColor;
 	style.Colors[ImGuiCol_SliderGrabActive] = buttonColor;
-
 
 	style.WindowRounding = 4.0f;
 
@@ -75,11 +81,11 @@ void Application::run() {
 	std::size_t e2 = entityManager.createEntity();
 	{
 		auto transform = std::make_unique<brayjl::TransformComponent>();
-		transform->position = { 1.0f, 1.0f, -1.0f };
+		transform->position = { 1.0f, 1.0f, 1.0f };
 		transform->scale = { 0.025f, 0.025f, 0.025f };
 		componentManager.addComponent(e2, std::move(transform));
 		auto modelComponent = std::make_unique<brayjl::ModelComponent>();
-		modelComponent->model = &tifaModel;
+		modelComponent->model = &ds1Model;
 		componentManager.addComponent(e2, std::move(modelComponent));
 	}
 
@@ -92,7 +98,7 @@ void Application::run() {
 		camera.update(m_window, m_window.getDeltaTime());
 
 		glm::mat4 viewMatrix = camera.getViewMatrix();
-		glm::mat4 projMatrix = glm::perspective(glm::radians(camera.getFov()), static_cast<float>(m_window.getWidth()) / m_window.getHeight(), 0.1f, 1000.0f);
+		glm::mat4 projMatrix = glm::perspective(glm::radians(camera.getFov()), static_cast<float>(m_window.getWidth()) / m_window.getHeight(), 0.01f, 1000.0f);
 
 		shader.use();
 		shader.setMat4("view", viewMatrix);
