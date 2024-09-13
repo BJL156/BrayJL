@@ -49,6 +49,11 @@ void Application::run() {
 	style.Colors[ImGuiCol_Tab] = buttonColor;
 	style.Colors[ImGuiCol_SliderGrab] = buttonColor;
 	style.Colors[ImGuiCol_SliderGrabActive] = buttonColor;
+	style.Colors[ImGuiCol_FrameBg] = buttonColor;
+	style.Colors[ImGuiCol_Border] = buttonColor;
+	style.Colors[ImGuiCol_CheckMark] = buttonColor;
+	style.Colors[ImGuiCol_FrameBgHovered] = buttonColor;
+	style.Colors[ImGuiCol_FrameBgActive] = buttonColor;
 
 	style.WindowRounding = 4.0f;
 

@@ -1,8 +1,3 @@
 ﻿  Application.cpp
-C:\dev\engine\BrayJL\Application\Source\Application.cpp(145,40): warning C4312: 'type cast': conversion from 'unsigned int' to 'void *' of greater size
-  Camera.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': macro redefinition
-C:\dev\engine\BrayJL\Vendor\glad\include\glad\glad.h(32,1): message : see previous definition of 'APIENTRY'
-  Main.cpp
-  Generating Code...
+C:\dev\engine\BrayJL\Application\Source\Application.cpp(150,40): warning C4312: 'type cast': conversion from 'unsigned int' to 'void *' of greater size
   Application.vcxproj -> C:\dev\engine\BrayJL\Bin\Release\x86_64\Application.exe
