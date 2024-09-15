@@ -17,43 +17,66 @@ void Application::run() {
 	io.Fonts->AddFontFromFileTTF("Resources/Fonts/Lato/Lato-Bold.ttf", 20.0f);
 
 	ImVec4 textColor = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
-	ImVec4 headerColors = ImVec4(0.025f, 0.025f, 0.025f, 1.0f);
-	ImVec4 windowColor = ImVec4(0.05f, 0.05f, 0.05f, 1.0f);
-	ImVec4 buttonColor = ImVec4(0.1f, 0.1f, 0.1f, 1.0f);
+	ImVec4 mainColor = ImVec4(0.1f, 0.1f, 0.1f, 1.0f);
+	ImVec4 accentColor = ImVec4(0.0f, 0.4f, 0.5f, 1.0f);
+	ImVec4 buttonColor = ImVec4(0.2f, 0.2f, 0.2f, 1.0f);
 
 	ImGuiStyle& style = ImGui::GetStyle();
 	style.Colors[ImGuiCol_Text] = textColor;
-	style.Colors[ImGuiCol_TextDisabled] = ImVec4(textColor.x / 0.1f, textColor.y / 0.1f, textColor.z / 0.1f, 1.0f);
-	style.Colors[ImGuiCol_WindowBg] = windowColor;
-
-	style.Colors[ImGuiCol_TitleBg] = headerColors;
-	style.Colors[ImGuiCol_TitleBgActive] = headerColors;
-	style.Colors[ImGuiCol_TitleBgCollapsed] = headerColors;
-	style.Colors[ImGuiCol_Header] = headerColors;
-	style.Colors[ImGuiCol_HeaderActive] = headerColors;
-	style.Colors[ImGuiCol_HeaderHovered] = headerColors;
-	style.Colors[ImGuiCol_MenuBarBg] = headerColors;
-	style.Colors[ImGuiCol_ResizeGripActive] = headerColors;
-	style.Colors[ImGuiCol_ResizeGripHovered] = headerColors;
-	style.Colors[ImGuiCol_ResizeGrip] = headerColors;
-	style.Colors[ImGuiCol_ChildBg] = headerColors;
-	style.Colors[ImGuiCol_TabActive] = headerColors;
-	style.Colors[ImGuiCol_TabHovered] = headerColors;
-	style.Colors[ImGuiCol_TabUnfocused] = headerColors;
-	style.Colors[ImGuiCol_TabUnfocusedActive] = headerColors;
-
-	style.Colors[ImGuiCol_Button] = buttonColor;
-	style.Colors[ImGuiCol_ButtonActive] = buttonColor;
-	style.Colors[ImGuiCol_ButtonHovered] = buttonColor;
-	style.Colors[ImGuiCol_CheckMark] = buttonColor;
-	style.Colors[ImGuiCol_Tab] = buttonColor;
-	style.Colors[ImGuiCol_SliderGrab] = buttonColor;
-	style.Colors[ImGuiCol_SliderGrabActive] = buttonColor;
-	style.Colors[ImGuiCol_FrameBg] = buttonColor;
-	style.Colors[ImGuiCol_Border] = buttonColor;
-	style.Colors[ImGuiCol_CheckMark] = buttonColor;
-	style.Colors[ImGuiCol_FrameBgHovered] = buttonColor;
-	style.Colors[ImGuiCol_FrameBgActive] = buttonColor;
+	style.Colors[ImGuiCol_TextDisabled] = ImVec4(textColor.x * 0.9f, textColor.y / 0.9f, textColor.z / 0.9f, 1.0f);
+	style.Colors[ImGuiCol_WindowBg] = mainColor;
+	style.Colors[ImGuiCol_ChildBg] = mainColor;
+	style.Colors[ImGuiCol_PopupBg] = mainColor;
+	style.Colors[ImGuiCol_Border] = mainColor;
+	style.Colors[ImGuiCol_BorderShadow] = accentColor;
+	style.Colors[ImGuiCol_FrameBg] = accentColor;
+	style.Colors[ImGuiCol_FrameBgHovered] = accentColor;
+	style.Colors[ImGuiCol_FrameBgActive] = accentColor;
+	style.Colors[ImGuiCol_TitleBg] = accentColor;
+	style.Colors[ImGuiCol_TitleBgActive] = accentColor;
+	style.Colors[ImGuiCol_TitleBgCollapsed] = accentColor;
+	style.Colors[ImGuiCol_MenuBarBg] = accentColor;
+	style.Colors[ImGuiCol_ScrollbarBg] = mainColor;
+	style.Colors[ImGuiCol_ScrollbarGrab] = accentColor;
+	style.Colors[ImGuiCol_ScrollbarGrabHovered] = accentColor;
+	style.Colors[ImGuiCol_ScrollbarGrabActive] = accentColor;
+	style.Colors[ImGuiCol_CheckMark] = mainColor;
+	style.Colors[ImGuiCol_SliderGrab] = mainColor;
+	style.Colors[ImGuiCol_SliderGrabActive] = mainColor;
+	style.Colors[ImGuiCol_Button] = accentColor;
+	style.Colors[ImGuiCol_ButtonHovered] = accentColor;
+	style.Colors[ImGuiCol_ButtonActive] = accentColor;
+	style.Colors[ImGuiCol_Header] = accentColor;
+	style.Colors[ImGuiCol_HeaderHovered] = accentColor;
+	style.Colors[ImGuiCol_HeaderActive] = accentColor;
+	style.Colors[ImGuiCol_Separator] = accentColor;
+	style.Colors[ImGuiCol_SeparatorHovered] = accentColor;
+	style.Colors[ImGuiCol_SeparatorActive] = accentColor;
+	style.Colors[ImGuiCol_ResizeGrip] = accentColor;
+	style.Colors[ImGuiCol_ResizeGripHovered] = accentColor;
+	style.Colors[ImGuiCol_ResizeGripActive] = accentColor;
+	style.Colors[ImGuiCol_Tab] = accentColor;
+	style.Colors[ImGuiCol_TabHovered] = accentColor;
+	style.Colors[ImGuiCol_TabActive] = accentColor;
+	style.Colors[ImGuiCol_TabUnfocused] = accentColor;
+	style.Colors[ImGuiCol_TabUnfocusedActive] = accentColor;
+	style.Colors[ImGuiCol_DockingPreview] = accentColor;
+	style.Colors[ImGuiCol_DockingEmptyBg] = accentColor;
+	style.Colors[ImGuiCol_PlotLines] = accentColor;
+	style.Colors[ImGuiCol_PlotLinesHovered] = accentColor;
+	style.Colors[ImGuiCol_PlotHistogram] = accentColor;
+	style.Colors[ImGuiCol_PlotHistogramHovered] = accentColor;
+	style.Colors[ImGuiCol_TableHeaderBg] = accentColor;
+	style.Colors[ImGuiCol_TableBorderStrong] = accentColor;
+	style.Colors[ImGuiCol_TableBorderLight] = accentColor;
+	style.Colors[ImGuiCol_TableRowBg] = accentColor;
+	style.Colors[ImGuiCol_TableRowBgAlt] = accentColor;
+	style.Colors[ImGuiCol_TextSelectedBg] = accentColor;
+	style.Colors[ImGuiCol_DragDropTarget] = accentColor;
+	style.Colors[ImGuiCol_NavHighlight] = accentColor;
+	style.Colors[ImGuiCol_NavWindowingHighlight] = accentColor;
+	style.Colors[ImGuiCol_NavWindowingDimBg] = accentColor;
+	style.Colors[ImGuiCol_ModalWindowDimBg] = accentColor;
 
 	style.WindowRounding = 4.0f;
 
@@ -86,16 +109,18 @@ void Application::run() {
 	std::size_t e2 = entityManager.createEntity();
 	{
 		auto transform = std::make_unique<brayjl::TransformComponent>();
-		transform->position = { 1.0f, 1.0f, 1.0f };
+		transform->position = { 1.0f, 1.0f, -1.0f };
 		transform->scale = { 0.025f, 0.025f, 0.025f };
 		componentManager.addComponent(e2, std::move(transform));
 		auto modelComponent = std::make_unique<brayjl::ModelComponent>();
-		modelComponent->model = &ds1Model;
+		modelComponent->model = &tifaModel;
 		componentManager.addComponent(e2, std::move(modelComponent));
 	}
 
 	brayjl::Framebuffer framebuffer(m_window);
 	brayjl::Framebuffer imguiFramebuffer(m_window);
+
+	std::size_t currentSelectedEntity = -1;
 
 	while (!m_window.shouldClose()) {
 		m_window.update();
@@ -146,14 +171,50 @@ void Application::run() {
 			cursorPosition.y + (imguiWindowSize.y - newHeight) * 0.5f
 		);
 
+		float borderThickness = 16.0f;
+		ImGui::GetWindowDrawList()->AddRect(
+			imagePosition,
+			ImVec2(imagePosition.x + newWidth - borderThickness, imagePosition.y + newHeight - borderThickness),
+			IM_COL32(accentColor.x * 255, accentColor.y * 255, accentColor.z * 255, 255),
+			0.0f,
+			0,
+			borderThickness
+		);
+
 		ImGui::GetWindowDrawList()->AddImage(
 			(void*)imguiFramebuffer.getTexture(),
 			imagePosition,
-			ImVec2(imagePosition.x + newWidth, imagePosition.y + newHeight),
-			ImVec2(0, 1), ImVec2(1, 0));
+			ImVec2(imagePosition.x + newWidth - borderThickness, imagePosition.y + newHeight - borderThickness),
+			ImVec2(0.0f, 1.0f),
+			ImVec2(1.0f, 0.0f)
+		);
 		ImGui::End();
 
-		ImGui::ShowDemoWindow();
+		ImGui::Begin("Entity List");
+		for (std::size_t i = 0; i < entityManager.getCurrentEntityCount(); i++) {
+			std::string buttonText = "Entity [" + std::to_string(i) + "]";
+			if (ImGui::Button(buttonText.c_str())) {
+				currentSelectedEntity = i;
+			}
+		}
+		ImGui::End();
+
+		ImGui::Begin("Properties");
+		if (currentSelectedEntity != -1) {
+			brayjl::TransformComponent* transform = componentManager.getComponent<brayjl::TransformComponent>(currentSelectedEntity);
+			if (transform) {
+				ImGui::SeparatorText("Transform Component");
+				ImGui::Text("Position: (%.2f, %.2f, %.2f)", transform->position.x, transform->position.y, transform->position.z);
+				ImGui::Text("Scale: (%.2f, %.2f, %.2f)", transform->scale.x, transform->scale.y, transform->scale.z);
+			}
+
+			brayjl::ModelComponent* model = componentManager.getComponent<brayjl::ModelComponent>(currentSelectedEntity);
+			if (model) {
+				ImGui::SeparatorText("Model Component");
+				ImGui::Text("Name: %s", model->model->getFilepath().c_str());
+			}
+		}
+		ImGui::End();
 
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

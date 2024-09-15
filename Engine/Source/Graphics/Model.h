@@ -24,6 +24,8 @@ namespace brayjl {
 		Model(const std::string& filepath);
 
 		void draw(Shader& shader);
+
+		std::string getFilepath() const;
 	private:
 		void loadModel(std::string path);
 		void processNode(aiNode* node, const aiScene* scene);
@@ -34,6 +36,8 @@ namespace brayjl {
 		std::string m_directory;
 
 		std::vector<Texture> m_texturesLoaded;
+
+		std::string m_filepath;
 	};
 }
 

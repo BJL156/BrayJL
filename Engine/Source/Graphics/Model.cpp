@@ -41,7 +41,8 @@ namespace brayjl {
 		return textureID;
 	}
 
-	Model::Model(const std::string& filepath) {
+	Model::Model(const std::string& filepath)
+		: m_filepath(filepath) {
 		loadModel(filepath);
 	}
 
@@ -49,6 +50,10 @@ namespace brayjl {
 		for (unsigned int i = 0; i < m_meshes.size(); i++) {
 			m_meshes[i].draw(shader);
 		}
+	}
+
+	std::string Model::getFilepath() const {
+		return m_filepath;
 	}
 
 	void Model::loadModel(std::string path) {
