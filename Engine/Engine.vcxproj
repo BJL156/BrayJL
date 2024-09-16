@@ -101,13 +101,13 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Core\ComponentManager.h" />
-    <ClInclude Include="Source\Core\EntityManager.h" />
     <ClInclude Include="Source\Core\Logger.h" />
-    <ClInclude Include="Source\Core\ModelComponent.h" />
-    <ClInclude Include="Source\Core\RenderSystem.h" />
-    <ClInclude Include="Source\Core\TransformComponent.h" />
     <ClInclude Include="Source\Core\Utilities.h" />
+    <ClInclude Include="Source\ECS\ComponentManager.h" />
+    <ClInclude Include="Source\ECS\EntityManager.h" />
+    <ClInclude Include="Source\ECS\ModelComponent.h" />
+    <ClInclude Include="Source\ECS\RenderSystem.h" />
+    <ClInclude Include="Source\ECS\TransformComponent.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\Graphics\Framebuffer.h" />
     <ClInclude Include="Source\Graphics\Mesh.h" />
@@ -119,10 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c" />
-    <ClCompile Include="Source\Core\EntityManager.cpp" />
     <ClCompile Include="Source\Core\Logger.cpp" />
-    <ClCompile Include="Source\Core\RenderSystem.cpp" />
     <ClCompile Include="Source\Core\Utilities.cpp" />
+    <ClCompile Include="Source\ECS\EntityManager.cpp" />
+    <ClCompile Include="Source\ECS\RenderSystem.cpp" />
     <ClCompile Include="Source\Graphics\Framebuffer.cpp" />
     <ClCompile Include="Source\Graphics\Mesh.cpp" />
     <ClCompile Include="Source\Graphics\Model.cpp" />

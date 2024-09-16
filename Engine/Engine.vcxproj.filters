@@ -24,22 +24,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Core\ComponentManager.h">
-      <Filter>Source\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Core\EntityManager.h">
-      <Filter>Source\Core</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Core\Logger.h">
-      <Filter>Source\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Core\ModelComponent.h">
-      <Filter>Source\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Core\RenderSystem.h">
-      <Filter>Source\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Core\TransformComponent.h">
       <Filter>Source\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\Utilities.h">
@@ -69,18 +54,17 @@
     <ClInclude Include="Source\Platform\Window.h">
       <Filter>Source\Platform</Filter>
     </ClInclude>
+    <ClInclude Include="Source\ECS\ComponentManager.h" />
+    <ClInclude Include="Source\ECS\EntityManager.h" />
+    <ClInclude Include="Source\ECS\ModelComponent.h" />
+    <ClInclude Include="Source\ECS\RenderSystem.h" />
+    <ClInclude Include="Source\ECS\TransformComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
       <Filter>vendor\glad\include</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Core\EntityManager.cpp">
-      <Filter>Source\Core</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Core\Logger.cpp">
-      <Filter>Source\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Core\RenderSystem.cpp">
       <Filter>Source\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\Utilities.cpp">
@@ -107,5 +91,7 @@
     <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Platform</Filter>
     </ClCompile>
+    <ClCompile Include="Source\ECS\EntityManager.cpp" />
+    <ClCompile Include="Source\ECS\RenderSystem.cpp" />
   </ItemGroup>
 </Project>
