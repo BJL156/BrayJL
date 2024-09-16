@@ -117,6 +117,17 @@ void Application::run() {
 		componentManager.addComponent(e2, std::move(modelComponent));
 	}
 
+	std::size_t e3 = entityManager.createEntity();
+	{
+		auto transform = std::make_unique<brayjl::TransformComponent>();
+		transform->position = { 0.0f, 0.0f, -3.0f };
+		transform->scale = { 3.0f, 3.0f, 3.0f };
+		componentManager.addComponent(e3, std::move(transform));
+		auto modelComponent = std::make_unique<brayjl::ModelComponent>();
+		modelComponent->model = &ds1Model;
+		componentManager.addComponent(e3, std::move(modelComponent));
+	}
+
 	brayjl::Framebuffer framebuffer(m_window);
 	brayjl::Framebuffer imguiFramebuffer(m_window);
 
@@ -191,10 +202,40 @@ void Application::run() {
 		ImGui::End();
 
 		ImGui::Begin("Entity List");
+		if (ImGui::Button("Add entity")) {
+			std::size_t e = entityManager.createEntity();
+			{
+				auto transform = std::make_unique<brayjl::TransformComponent>();
+				transform->position = { 0.0f, 0.0f, 0.0f };
+				transform->scale = { 1.0f, 1.0f, 1.0f };
+				componentManager.addComponent(e, std::move(transform));
+				auto modelComponent = std::make_unique<brayjl::ModelComponent>();
+				modelComponent->model = &ds1Model;
+				componentManager.addComponent(e, std::move(modelComponent));
+			}
+		}
+
+		if (ImGui::Button("Destroy entity")) {
+			entityManager.destroyEntity(currentSelectedEntity);
+		}
+
 		for (std::size_t i = 0; i < entityManager.getCurrentEntityCount(); i++) {
 			std::string buttonText = "Entity [" + std::to_string(i) + "]";
+			
+			bool selectedButton = currentSelectedEntity == i;
+
+			if (selectedButton) {
+				ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(accentColor.x * 0.9f, accentColor.y * 0.9f, accentColor.z * 0.9f, accentColor.z));
+				ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(accentColor.x * 0.9f, accentColor.y * 0.9f, accentColor.z * 0.9f, accentColor.z));
+				ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(accentColor.x * 0.9f, accentColor.y * 0.9f, accentColor.z * 0.9f, accentColor.z));
+			}
+
 			if (ImGui::Button(buttonText.c_str())) {
 				currentSelectedEntity = i;
+			}
+
+			if (selectedButton) {
+				ImGui::PopStyleColor(3);
 			}
 		}
 		ImGui::End();
