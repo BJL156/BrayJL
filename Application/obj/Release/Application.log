@@ -1,5 +1,3 @@
 ﻿  Application.cpp
-D:\dev\engine\BrayJL\Application\Source\Application.cpp(196,4): warning C4312: 'type cast': conversion from 'unsigned int' to 'void *' of greater size
-  Main.cpp
-  Generating Code...
-  Application.vcxproj -> D:\dev\engine\BrayJL\Bin\Release\x86_64\Application.exe
+C:\dev\engine\BrayJL\Application\Source\Application.cpp(195,40): warning C4312: 'type cast': conversion from 'unsigned int' to 'void *' of greater size
+  Application.vcxproj -> C:\dev\engine\BrayJL\Bin\Release\x86_64\Application.exe

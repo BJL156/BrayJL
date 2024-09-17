@@ -7,6 +7,9 @@
     <Filter Include="Source\Core">
       <UniqueIdentifier>{6E95150F-DA4A-8E04-633F-88DBCFF38408}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\ECS">
+      <UniqueIdentifier>{A09AC236-8C52-0484-F559-DDDFE1309F74}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source\Graphics">
       <UniqueIdentifier>{56D4EE92-C25F-5C57-CB70-DF4B377BB857}</UniqueIdentifier>
     </Filter>
@@ -29,6 +32,21 @@
     </ClInclude>
     <ClInclude Include="Source\Core\Utilities.h">
       <Filter>Source\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ECS\ComponentManager.h">
+      <Filter>Source\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ECS\EntityManager.h">
+      <Filter>Source\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ECS\ModelComponent.h">
+      <Filter>Source\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ECS\RenderSystem.h">
+      <Filter>Source\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ECS\TransformComponent.h">
+      <Filter>Source\ECS</Filter>
     </ClInclude>
     <ClInclude Include="Source\Engine.h">
       <Filter>Source</Filter>
@@ -54,11 +72,6 @@
     <ClInclude Include="Source\Platform\Window.h">
       <Filter>Source\Platform</Filter>
     </ClInclude>
-    <ClInclude Include="Source\ECS\ComponentManager.h" />
-    <ClInclude Include="Source\ECS\EntityManager.h" />
-    <ClInclude Include="Source\ECS\ModelComponent.h" />
-    <ClInclude Include="Source\ECS\RenderSystem.h" />
-    <ClInclude Include="Source\ECS\TransformComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
@@ -69,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="Source\Core\Utilities.cpp">
       <Filter>Source\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ECS\EntityManager.cpp">
+      <Filter>Source\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ECS\RenderSystem.cpp">
+      <Filter>Source\ECS</Filter>
     </ClCompile>
     <ClCompile Include="Source\Graphics\Framebuffer.cpp">
       <Filter>Source\Graphics</Filter>
@@ -91,7 +110,5 @@
     <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Platform</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ECS\EntityManager.cpp" />
-    <ClCompile Include="Source\ECS\RenderSystem.cpp" />
   </ItemGroup>
 </Project>

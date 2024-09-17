@@ -18,12 +18,12 @@ void Application::run() {
 
 	ImVec4 textColor = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
 	ImVec4 mainColor = ImVec4(0.1f, 0.1f, 0.1f, 1.0f);
-	ImVec4 accentColor = ImVec4(0.0f, 0.4f, 0.5f, 1.0f);
+	ImVec4 accentColor = ImVec4(0.7f, 0.6f, 0.3f, 1.0f);
 	ImVec4 buttonColor = ImVec4(0.2f, 0.2f, 0.2f, 1.0f);
 
 	ImGuiStyle& style = ImGui::GetStyle();
 	style.Colors[ImGuiCol_Text] = textColor;
-	style.Colors[ImGuiCol_TextDisabled] = ImVec4(textColor.x * 0.9f, textColor.y / 0.9f, textColor.z / 0.9f, 1.0f);
+	style.Colors[ImGuiCol_TextDisabled] = ImVec4(textColor.x * 0.9f, textColor.y * 0.9f, textColor.z * 0.9f, 1.0f);
 	style.Colors[ImGuiCol_WindowBg] = mainColor;
 	style.Colors[ImGuiCol_ChildBg] = mainColor;
 	style.Colors[ImGuiCol_PopupBg] = mainColor;
@@ -60,8 +60,8 @@ void Application::run() {
 	style.Colors[ImGuiCol_TabActive] = accentColor;
 	style.Colors[ImGuiCol_TabUnfocused] = accentColor;
 	style.Colors[ImGuiCol_TabUnfocusedActive] = accentColor;
-	style.Colors[ImGuiCol_DockingPreview] = accentColor;
-	style.Colors[ImGuiCol_DockingEmptyBg] = accentColor;
+	style.Colors[ImGuiCol_DockingPreview] = ImVec4(accentColor.x * 0.9f, accentColor.y * 0.9f, accentColor.z * 0.9f, accentColor.w);
+	style.Colors[ImGuiCol_DockingEmptyBg] = ImVec4(mainColor.x * 0.9f, mainColor.y * 0.9f, mainColor.z * 0.9f, mainColor.w);
 	style.Colors[ImGuiCol_PlotLines] = accentColor;
 	style.Colors[ImGuiCol_PlotLinesHovered] = accentColor;
 	style.Colors[ImGuiCol_PlotHistogram] = accentColor;
@@ -79,7 +79,6 @@ void Application::run() {
 	style.Colors[ImGuiCol_ModalWindowDimBg] = accentColor;
 
 	style.WindowRounding = 4.0f;
-
 
 	brayjl::InputHandler::initialize(m_window);
 
@@ -245,8 +244,78 @@ void Application::run() {
 			brayjl::TransformComponent* transform = componentManager.getComponent<brayjl::TransformComponent>(currentSelectedEntity);
 			if (transform) {
 				ImGui::SeparatorText("Transform Component");
-				ImGui::Text("Position: (%.2f, %.2f, %.2f)", transform->position.x, transform->position.y, transform->position.z);
-				ImGui::Text("Scale: (%.2f, %.2f, %.2f)", transform->scale.x, transform->scale.y, transform->scale.z);
+
+				ImGui::Text("Position");
+				ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+				if (ImGui::Button("X##0")) {
+					transform->position.x = 0;
+				}
+				ImGui::PopStyleColor(3);
+				ImGui::SameLine();
+				ImGui::SetNextItemWidth(50.0f);
+				ImGui::DragFloat("##PositionX", &transform->position.x, 0.1f);
+				ImGui::SameLine();
+
+				ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+				if (ImGui::Button("Y##0")) {
+					transform->position.y = 0;
+				}
+				ImGui::PopStyleColor(3);
+				ImGui::SameLine();
+				ImGui::SetNextItemWidth(50.0f);
+				ImGui::DragFloat("##PositionY", &transform->position.y, 0.1f);
+				ImGui::SameLine();
+
+				ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.0f, 1.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 0.0f, 1.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.0f, 0.0f, 1.0f, 1.0f));
+				if (ImGui::Button("Z##0")) {
+					transform->position.z = 0;
+				}
+				ImGui::PopStyleColor(3);
+				ImGui::SameLine();
+				ImGui::SetNextItemWidth(50.0f);
+				ImGui::DragFloat("##PositionZ", &transform->position.z, 0.1f);
+
+				ImGui::Text("Scale");
+				ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1.0f, 0.0f, 0.0f, 1.0f));
+				if (ImGui::Button("X##1")) {
+					transform->scale.x = 1.0f;
+				}
+				ImGui::PopStyleColor(3);
+				ImGui::SameLine();
+				ImGui::SetNextItemWidth(50.0f);
+				ImGui::DragFloat("##ScaleX", &transform->scale.x, 0.1f);
+				ImGui::SameLine();
+
+				ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.0f, 1.0f, 0.0f, 1.0f));
+				if (ImGui::Button("Y##1")) {
+					transform->scale.y = 1.0f;
+				}
+				ImGui::PopStyleColor(3);
+				ImGui::SameLine();
+				ImGui::SetNextItemWidth(50.0f);
+				ImGui::DragFloat("##ScaleY", &transform->scale.y, 0.1f);
+				ImGui::SameLine();
+
+				ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.0f, 1.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 0.0f, 1.0f, 1.0f));
+				ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.0f, 0.0f, 1.0f, 1.0f));
+				if (ImGui::Button("Z##1")) {
+					transform->scale.z = 1.0f;
+				}
+				ImGui::PopStyleColor(3);
+				ImGui::SameLine();
+				ImGui::SetNextItemWidth(50.0f);
+				ImGui::DragFloat("##ScaleZ", &transform->scale.z, 0.1f);
 			}
 
 			brayjl::ModelComponent* model = componentManager.getComponent<brayjl::ModelComponent>(currentSelectedEntity);
