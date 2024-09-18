@@ -121,6 +121,7 @@
     <ClCompile Include="..\vendor\glad\include\glad.c" />
     <ClCompile Include="Source\Core\Logger.cpp" />
     <ClCompile Include="Source\Core\Utilities.cpp" />
+    <ClCompile Include="Source\ECS\ComponentManager.cpp" />
     <ClCompile Include="Source\ECS\EntityManager.cpp" />
     <ClCompile Include="Source\ECS\RenderSystem.cpp" />
     <ClCompile Include="Source\Graphics\Framebuffer.cpp" />

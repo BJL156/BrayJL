@@ -1,6 +1,7 @@
 D:\dev\engine\BrayJL\vendor\glad\include\glad.c;D:\dev\engine\BrayJL\Engine\obj\Release\glad.obj
 D:\dev\engine\BrayJL\Engine\Source\Core\Logger.cpp;D:\dev\engine\BrayJL\Engine\obj\Release\Logger.obj
 D:\dev\engine\BrayJL\Engine\Source\Core\Utilities.cpp;D:\dev\engine\BrayJL\Engine\obj\Release\Utilities.obj
+D:\dev\engine\BrayJL\Engine\Source\ECS\ComponentManager.cpp;D:\dev\engine\BrayJL\Engine\obj\Release\ComponentManager.obj
 D:\dev\engine\BrayJL\Engine\Source\ECS\EntityManager.cpp;D:\dev\engine\BrayJL\Engine\obj\Release\EntityManager.obj
 D:\dev\engine\BrayJL\Engine\Source\ECS\RenderSystem.cpp;D:\dev\engine\BrayJL\Engine\obj\Release\RenderSystem.obj
 D:\dev\engine\BrayJL\Engine\Source\Graphics\Framebuffer.cpp;D:\dev\engine\BrayJL\Engine\obj\Release\Framebuffer.obj

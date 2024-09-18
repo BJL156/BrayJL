@@ -1,6 +1,9 @@
 #ifndef COMPONENT_MANAGER_H
 #define COMPONENT_MANAGER_H
 
+#include "TransformComponent.h"
+#include "ModelComponent.h"
+
 #include <unordered_map>
 #include <memory>
 
@@ -9,6 +12,8 @@ namespace brayjl {
 	public:
 		template<typename T>
 		void addComponent(const std::size_t& entityId, std::unique_ptr<T> component);
+
+		void removeAllComponents(const std::size_t& entityId);
 
 		template<typename T>
 		T* getComponent(const std::size_t& entityId);

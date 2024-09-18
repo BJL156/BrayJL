@@ -110,5 +110,6 @@
     <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Platform</Filter>
     </ClCompile>
+    <ClCompile Include="Source\ECS\ComponentManager.cpp" />
   </ItemGroup>
 </Project>

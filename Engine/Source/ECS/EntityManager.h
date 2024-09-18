@@ -1,13 +1,15 @@
 #ifndef ENTITY_MANAGER_H
 #define ENTITY_MANAGER_H
 
+#include "ComponentManager.h"
+
 #include <cstddef>
 #include <queue>
 
 namespace brayjl {
 	class EntityManager {
 	public:
-		EntityManager() = default;
+		EntityManager(ComponentManager& componentManager);
 		~EntityManager() = default;
 
 		std::size_t createEntity();
@@ -19,6 +21,8 @@ namespace brayjl {
 		std::size_t m_currentEntityCount = 0;
 
 		std::queue<std::size_t> m_freedEntities;
+
+		ComponentManager& m_componentManager;
 	};
 }
 

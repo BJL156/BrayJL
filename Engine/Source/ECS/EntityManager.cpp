@@ -1,6 +1,11 @@
 #include "EntityManager.h"
 
 namespace brayjl {
+	EntityManager::EntityManager(ComponentManager& componentManager)
+		: m_componentManager(componentManager) {
+
+	}
+
 	std::size_t EntityManager::createEntity() {
 		m_currentEntityCount++;
 
@@ -21,6 +26,8 @@ namespace brayjl {
 
 		m_currentEntityCount--;
 		m_freedEntities.push(entity);
+
+		m_componentManager.removeAllComponents(entity);
 	}
 
 	std::size_t EntityManager::getCurrentEntityCount() const {

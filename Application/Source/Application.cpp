@@ -90,8 +90,8 @@ void Application::run() {
 
 	Camera camera{};
 
-	brayjl::EntityManager entityManager{};
 	brayjl::ComponentManager componentManager{};
+	brayjl::EntityManager entityManager(componentManager);
 	brayjl::RenderSystem renderSystem(componentManager);
 
 	std::size_t e1 = entityManager.createEntity();
