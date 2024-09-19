@@ -14,18 +14,7 @@ project "Engine"
 		"Resources/**.frag",
 		"%{wks.location}/vendor/glad/include/glad.c",
 	}
-
-	externalincludedirs {
-		"%{wks.location}/Vendor/imgui/include"
-	}
-
-	vpaths {
-		["External Libraries"] = { 
-			"%{wks.location}/Vendor/imgui/include/**.h",
-			"%{wks.location}/Vendor/imgui/include/**.cpp"
-		},
-	}
-
+	
 	includedirs {
 		"Source",
 		"%{wks.location}/Vendor/spdlog/include",
@@ -33,8 +22,7 @@ project "Engine"
 		"%{wks.location}/Vendor/glad/include",
 		"%{wks.location}/Vendor/glm/include",
 		"%{wks.location}/Vendor/assimp/include",
-		"%{wks.location}/Vendor/stb/include",
-		"%{wks.location}/Vendor/imgui/include"
+		"%{wks.location}/Vendor/stb/include"
 	}
 
 	libdirs {

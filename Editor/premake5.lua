@@ -16,6 +16,17 @@ project "Editor"
 		"%{wks.location}/Vendor/imgui/include/**.cpp"
 	}
 
+	externalincludedirs {
+		"%{wks.location}/Vendor/imgui/include"
+	}
+	
+	vpaths {
+		["External Libraries"] = { 
+			"%{wks.location}/Vendor/imgui/include/**.h",
+			"%{wks.location}/Vendor/imgui/include/**.cpp"
+		},
+	}
+
 	includedirs {
 		"Source",
 		"%{wks.location}/Engine/source",
@@ -26,17 +37,6 @@ project "Editor"
 		"%{wks.location}/Vendor/assimp/include",
 		"%{wks.location}/Vendor/stb/include",
 		"%{wks.location}/Vendor/imgui/include"
-	}
-
-	externalincludedirs {
-		"%{wks.location}/Vendor/imgui/include"
-	}
-
-	vpaths {
-		["External Libraries"] = { 
-			"%{wks.location}/Vendor/imgui/include/**.h",
-			"%{wks.location}/Vendor/imgui/include/**.cpp"
-		},
 	}
 
 	libdirs {

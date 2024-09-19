@@ -34,6 +34,12 @@
     <Filter Include="Source">
       <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Editor">
+      <UniqueIdentifier>{CC4BAF2E-380C-2B65-0147-74E26DC66F41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Editor\Panels">
+      <UniqueIdentifier>{9EBE4965-8A4D-D32E-336C-E7291FDAE3D4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Application.h">
@@ -42,10 +48,18 @@
     <ClInclude Include="Source\Camera.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Editor\EditorInstance.h" />
-    <ClInclude Include="Source\Editor\Panels\ViewportPanel.h" />
-    <ClInclude Include="Source\Editor\Panels\EntityListPanel.h" />
-    <ClInclude Include="Source\Editor\Panels\PropertiesPanel.h" />
+    <ClInclude Include="Source\Editor\EditorInstance.h">
+      <Filter>Source\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Editor\Panels\EntityListPanel.h">
+      <Filter>Source\Editor\Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Editor\Panels\PropertiesPanel.h">
+      <Filter>Source\Editor\Panels</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Editor\Panels\ViewportPanel.h">
+      <Filter>Source\Editor\Panels</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Vendor\imgui\include\imgui\imgui.cpp">
@@ -78,13 +92,21 @@
     <ClCompile Include="Source\Camera.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Editor\EditorInstance.cpp">
+      <Filter>Source\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Editor\Panels\EntityListPanel.cpp">
+      <Filter>Source\Editor\Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Editor\Panels\PropertiesPanel.cpp">
+      <Filter>Source\Editor\Panels</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Editor\Panels\ViewportPanel.cpp">
+      <Filter>Source\Editor\Panels</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Editor\EditorInstance.cpp" />
-    <ClCompile Include="Source\Editor\Panels\ViewportPanel.cpp" />
-    <ClCompile Include="Source\Editor\Panels\EntityListPanel.cpp" />
-    <ClCompile Include="Source\Editor\Panels\PropertiesPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shaders\Framebuffer.frag">
