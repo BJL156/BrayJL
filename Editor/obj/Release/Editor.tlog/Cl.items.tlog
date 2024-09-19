@@ -8,4 +8,8 @@ D:\dev\engine\BrayJL\Vendor\imgui\include\imgui\imgui_widgets.cpp;D:\dev\engine\
 D:\dev\engine\BrayJL\vendor\glad\include\glad.c;D:\dev\engine\BrayJL\Editor\obj\Release\glad.obj
 D:\dev\engine\BrayJL\Editor\Source\Application.cpp;D:\dev\engine\BrayJL\Editor\obj\Release\Application.obj
 D:\dev\engine\BrayJL\Editor\Source\Camera.cpp;D:\dev\engine\BrayJL\Editor\obj\Release\Camera.obj
+D:\dev\engine\BrayJL\Editor\Source\Editor\EditorInstance.cpp;D:\dev\engine\BrayJL\Editor\obj\Release\EditorInstance.obj
+D:\dev\engine\BrayJL\Editor\Source\Editor\Panels\EntityListPanel.cpp;D:\dev\engine\BrayJL\Editor\obj\Release\EntityListPanel.obj
+D:\dev\engine\BrayJL\Editor\Source\Editor\Panels\PropertiesPanel.cpp;D:\dev\engine\BrayJL\Editor\obj\Release\PropertiesPanel.obj
+D:\dev\engine\BrayJL\Editor\Source\Editor\Panels\ViewportPanel.cpp;D:\dev\engine\BrayJL\Editor\obj\Release\ViewportPanel.obj
 D:\dev\engine\BrayJL\Editor\Source\Main.cpp;D:\dev\engine\BrayJL\Editor\obj\Release\Main.obj

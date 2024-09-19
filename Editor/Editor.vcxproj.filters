@@ -42,6 +42,10 @@
     <ClInclude Include="Source\Camera.h">
       <Filter>Source</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Editor\EditorInstance.h" />
+    <ClInclude Include="Source\Editor\Panels\ViewportPanel.h" />
+    <ClInclude Include="Source\Editor\Panels\EntityListPanel.h" />
+    <ClInclude Include="Source\Editor\Panels\PropertiesPanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Vendor\imgui\include\imgui\imgui.cpp">
@@ -77,6 +81,10 @@
     <ClCompile Include="Source\Main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Editor\EditorInstance.cpp" />
+    <ClCompile Include="Source\Editor\Panels\ViewportPanel.cpp" />
+    <ClCompile Include="Source\Editor\Panels\EntityListPanel.cpp" />
+    <ClCompile Include="Source\Editor\Panels\PropertiesPanel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shaders\Framebuffer.frag">
