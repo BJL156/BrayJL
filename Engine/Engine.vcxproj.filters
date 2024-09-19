@@ -83,6 +83,9 @@
     <ClCompile Include="Source\Core\Utilities.cpp">
       <Filter>Source\Core</Filter>
     </ClCompile>
+    <ClCompile Include="Source\ECS\ComponentManager.cpp">
+      <Filter>Source\ECS</Filter>
+    </ClCompile>
     <ClCompile Include="Source\ECS\EntityManager.cpp">
       <Filter>Source\ECS</Filter>
     </ClCompile>
@@ -110,6 +113,5 @@
     <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Platform</Filter>
     </ClCompile>
-    <ClCompile Include="Source\ECS\ComponentManager.cpp" />
   </ItemGroup>
 </Project>

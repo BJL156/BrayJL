@@ -9,3 +9,4 @@ workspace "BrayJL"
 
 include "Engine"
 include "Application"
+include "Editor"

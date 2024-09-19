@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{61705900-4DFC-870B-B6AA-880BA255880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Vendor">
+      <UniqueIdentifier>{7E9B3B46-EA05-F0BC-3344-A1629FEDCD11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Vendor\imgui">
+      <UniqueIdentifier>{68CFB9A1-D45A-2766-DD6B-AA5A49768366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Vendor\imgui\include">
+      <UniqueIdentifier>{DBDE3337-4716-7CCE-5020-E0F1BCD6A2C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\Vendor\imgui\include\imgui">
+      <UniqueIdentifier>{856480E1-F17C-670B-BA29-F7A42601FCA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\vendor">
+      <UniqueIdentifier>{9EAFE090-0A1A-9507-5358-46ADBF01735C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\vendor\glad">
+      <UniqueIdentifier>{65F5C1C7-51C3-B5CD-3A57-26F426C49132}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\vendor\glad\include">
+      <UniqueIdentifier>{D8B18C00-C4AB-B552-AD18-4C6399B11BBF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{000BCD17-6C75-818E-B5B3-3234215D5FE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Shaders">
+      <UniqueIdentifier>{D92F8C3C-4546-8AD2-8EBD-15F4FA125B5A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{56EB95D1-428D-C0A7-2B48-D4FB178947F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Application.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui.cpp">
+      <Filter>..\Vendor\imgui\include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_demo.cpp">
+      <Filter>..\Vendor\imgui\include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_draw.cpp">
+      <Filter>..\Vendor\imgui\include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_impl_glfw.cpp">
+      <Filter>..\Vendor\imgui\include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_impl_opengl3.cpp">
+      <Filter>..\Vendor\imgui\include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_tables.cpp">
+      <Filter>..\Vendor\imgui\include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Vendor\imgui\include\imgui\imgui_widgets.cpp">
+      <Filter>..\Vendor\imgui\include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\glad\include\glad.c">
+      <Filter>..\vendor\glad\include</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaders\Framebuffer.frag">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\Framebuffer.vert">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\Model.frag">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\Model.vert">
+      <Filter>Resources\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

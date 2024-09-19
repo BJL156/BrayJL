@@ -1,3 +1,1 @@
-﻿  ComponentManager.cpp
-assimp-vc143-mt.lib(assimp-vc143-mt.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
-  Engine.vcxproj -> D:\dev\engine\BrayJL\Bin\Release\x86_64\Engine.lib
+﻿  Engine.vcxproj -> D:\dev\engine\BrayJL\Bin\Release\x86_64\Engine.lib

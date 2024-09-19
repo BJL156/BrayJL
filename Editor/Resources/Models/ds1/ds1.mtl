@@ -1,0 +1,132 @@
+# Blender 4.2.0 MTL File: 'None'
+# www.blender.org
+
+newmtl Arms_A
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_Kd Body.png
+map_d Body.png
+
+newmtl Body
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd Sif_Head.png
+map_d Sif_Head.png
+map_Bump -bm 0.400000 Sif_Head_n.png
+
+newmtl Body_A
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.444444 0.444444 0.444444
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Body_2.png
+map_d Body_2.png
+map_Bump -bm 0.300000 Body_2_n.png
+
+newmtl Body_B
+Ns 197.530838
+Ka 0.500000 0.500000 0.500000
+Ks 0.569444 0.569444 0.569444
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_Kd Body_2.png
+map_d Body_2.png
+map_Bump -bm 0.400000 Body_2_n.png
+
+newmtl Body_C
+Ns 308.642029
+Ka 0.500000 0.500000 0.500000
+Ks 0.069444 0.069444 0.069444
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_Kd Body_3.png
+map_d Body_3.png
+map_Bump -bm 0.400000 Body_3_n.png
+
+newmtl Fur
+Ns 32.600319
+Ka 1.000000 1.000000 1.000000
+Ks 0.055556 0.055556 0.055556
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Sif_Body.png
+map_d Sif_Body.png
+map_Bump -bm 0.400000 Sif_Body_n.png
+
+newmtl Head
+Ns 0.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.291667 0.291667 0.291667
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_Kd Head.png
+map_d Head.png
+map_Bump -bm 0.400000 Head_n.png
+
+newmtl Head_B
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Head.png
+map_d Head.png
+map_Bump -bm 0.400000 Head_n.png
+
+newmtl Legs_A
+Ns 23.341034
+Ka 1.000000 1.000000 1.000000
+Ks 0.111111 0.111111 0.111111
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Body_3.png
+map_d Body_3.png
+map_Bump -bm 0.500000 Body_3_n.png
+
+newmtl Legs_B
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_Kd Legs.png
+map_d Legs.png
+map_Bump -bm 0.400000 Legs_n.png
+
+newmtl Material_#15
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.321935 0.418065 0.405173
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl Sword
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd Sword.png
+map_d Sword.png
+map_Bump -bm 0.400000 Sword_n.png
