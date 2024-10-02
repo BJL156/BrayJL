@@ -100,6 +100,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Source\Core\Logger.h" />
+    <ClInclude Include="Source\Core\ResourceManager.h" />
     <ClInclude Include="Source\Core\Utilities.h" />
     <ClInclude Include="Source\ECS\ComponentManager.h" />
     <ClInclude Include="Source\ECS\EntityManager.h" />
@@ -118,6 +119,7 @@
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c" />
     <ClCompile Include="Source\Core\Logger.cpp" />
+    <ClCompile Include="Source\Core\ResourceManager.cpp" />
     <ClCompile Include="Source\Core\Utilities.cpp" />
     <ClCompile Include="Source\ECS\ComponentManager.cpp" />
     <ClCompile Include="Source\ECS\EntityManager.cpp" />

@@ -6,6 +6,7 @@
 
 #include "Core/Logger.h"
 #include "Core/Utilities.h"
+#include "Core/ResourceManager.h"
 
 #include "ECS/EntityManager.h"
 #include "ECS/ComponentManager.h"

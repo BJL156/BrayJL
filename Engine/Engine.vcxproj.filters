@@ -72,6 +72,7 @@
     <ClInclude Include="Source\Platform\Window.h">
       <Filter>Source\Platform</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Core\ResourceManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\vendor\glad\include\glad.c">
@@ -113,5 +114,6 @@
     <ClCompile Include="Source\Platform\Window.cpp">
       <Filter>Source\Platform</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\ResourceManager.cpp" />
   </ItemGroup>
 </Project>

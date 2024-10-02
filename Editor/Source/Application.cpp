@@ -4,11 +4,10 @@ void Application::run() {
 	editor::EditorInstance::initialize(m_window);
 	brayjl::InputHandler::initialize(m_window);
 
-	brayjl::Shader shader{	"Resources/Shaders/Model.vert",
-							"Resources/Shaders/Model.frag" };
-
-	brayjl::Model ds1Model{ "Resources/Models/ds1/ds1.obj" };
-	brayjl::Model tifaModel{ "Resources/Models/tifa/Tifa.obj" };
+	brayjl::ResourceManager resourceManager{};
+	resourceManager.loadShader("Resources/Shaders/Model.vert", "Resources/Shaders/Model.frag", "Model");
+	resourceManager.loadModel("Resources/Models/ds1/ds1.obj", "Dark Souls");
+	resourceManager.loadModel("Resources/Models/tifa/Tifa.obj", "FFVII");
 
 	Camera camera{};
 
@@ -23,7 +22,7 @@ void Application::run() {
 		transform->scale = { 1.0f, 1.0f, 1.0f };
 		componentManager.addComponent(e1, std::move(transform));
 		auto modelComponent = std::make_unique<brayjl::ModelComponent>();
-		modelComponent->model = &ds1Model;
+		modelComponent->model = resourceManager.getModel("Dark Souls").get();
 		componentManager.addComponent(e1, std::move(modelComponent));
 	}
 
@@ -34,7 +33,7 @@ void Application::run() {
 		transform->scale = { 0.025f, 0.025f, 0.025f };
 		componentManager.addComponent(e2, std::move(transform));
 		auto modelComponent = std::make_unique<brayjl::ModelComponent>();
-		modelComponent->model = &tifaModel;
+		modelComponent->model = resourceManager.getModel("FFVII").get();
 		componentManager.addComponent(e2, std::move(modelComponent));
 	}
 
@@ -45,7 +44,7 @@ void Application::run() {
 		transform->scale = { 3.0f, 3.0f, 3.0f };
 		componentManager.addComponent(e3, std::move(transform));
 		auto modelComponent = std::make_unique<brayjl::ModelComponent>();
-		modelComponent->model = &ds1Model;
+		modelComponent->model = resourceManager.getModel("Dark Souls").get();
 		componentManager.addComponent(e3, std::move(modelComponent));
 	}
 
@@ -62,12 +61,12 @@ void Application::run() {
 		glm::mat4 viewMatrix = camera.getViewMatrix();
 		glm::mat4 projMatrix = glm::perspective(glm::radians(camera.getFov()), static_cast<float>(m_window.getWidth()) / m_window.getHeight(), 0.01f, 1000.0f);
 
-		shader.use();
-		shader.setMat4("view", viewMatrix);
-		shader.setMat4("proj", projMatrix);
+		resourceManager.getShader("Model")->use();
+		resourceManager.getShader("Model")->setMat4("view", viewMatrix);
+		resourceManager.getShader("Model")->setMat4("proj", projMatrix);
 
 		framebuffer.bind();
-		renderSystem.render(shader);
+		renderSystem.render(*resourceManager.getShader("Model"));
 		framebuffer.unbind();
 
 		imguiFramebuffer.bind();
